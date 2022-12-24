@@ -1,0 +1,333 @@
+@media (max-width: 1200px) {
+  #hero img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .iframe {
+    width: 590px;
+    height: 380px;
+  }
+
+  .iframe iframe {
+    width: 530px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 965px) {
+  .hero-info h1 {
+    font-size: 55px;
+  }
+  .hero-info h2 {
+    font-size: 45px;
+  }
+  .hero-info p {
+    font-size: 15px;
+  }
+
+  .link a {
+    font-size: 15px;
+  }
+
+  #hero img {
+    width: 250px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    gap: 20px;
+  }
+  .navbar-list {
+    position: absolute;
+    top: 100px;
+    left: 15%;
+    right: 15%;
+    width: 70%;
+    flex-direction: column;
+    background-color: #090909;
+    border: 2px solid #ffffff;
+    border-top: 0px;
+    border-radius: 0px 0px 15px 15px;
+    align-items: center;
+    padding: 25px 30px;
+    gap: 25px;
+    z-index: 2;
+    display: none;
+  }
+  .menu-label {
+    display: flex;
+    order: 2;
+    cursor: pointer;
+  }
+
+  #menu-toggle:checked + .navbar-list {
+    display: flex;
+  }
+
+  .beneficios-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0px;
+    width: 90%;
+    height: 200px;
+    padding: 0px;
+  }
+
+  .beneficios-card-izq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 0px;
+  }
+  .beneficios-card-izq img {
+    width: 100px;
+  }
+
+  .beneficios-card-izq h2 {
+    font-size: 25px;
+    width: 180px;
+  }
+  .beneficios-card p {
+    font-size: 16px;
+    font-weight: 200;
+    text-align: justify;
+    padding: 0px 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  #hero {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+  .hero-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    gap: 20px;
+  }
+  .hero-info h1 {
+    font-size: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-info h2 {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-info p {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .link a {
+    font-size: 20px;
+  }
+}
+@media (max-width: 700px) {
+  .productos-contenedor {
+    gap: 10px;
+    flex-direction: column;
+  }
+  .productos-card {
+    gap: 5px;
+    border: 2px solid #ffffff;
+    padding: 5px;
+  }
+  .info-contacto {
+    width: 280px;
+    height: 290px;
+  }
+
+  .footer-contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .productos-card {
+    flex-direction: row;
+    width: 400px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 645px) {
+  .iframe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    width: 280px;
+    height: 385px;
+  }
+
+  .iframe iframe {
+    width: 250px;
+    height: 300px;
+  }
+  #beneficios {
+    width: 90%;
+  }
+  .beneficios-texto {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+  }
+  .beneficios-texto h2 {
+    font-size: 55px;
+    font-weight: 700;
+  }
+
+  .beneficios-texto p {
+    font-size: 20px;
+    font-weight: 200;
+    text-align: justify;
+    width: 90%;
+  }
+  .beneficios-card {
+    flex-direction: column;
+    width: 280px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-info h1 {
+    font-size: 48px;
+  }
+  .hero-info h2 {
+    font-size: 35px;
+  }
+  .hero-info p {
+    font-size: 14px;
+  }
+
+  .link a {
+    font-size: 14px;
+  }
+
+  #hero img {
+    width: 250px;
+  }
+
+  .contenedor-izq p {
+    font-size: 14px;
+  }
+
+  .contenedor-izq img {
+    width: 40px;
+  }
+
+  .contenedor-der a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 450px) {
+  .productos-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 250px;
+  }
+}
+
+@media (max-width: 400px) {
+  header a img {
+    width: 60px;
+  }
+  .carrito {
+    left: 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  .carrito-contenedor {
+    width: 280px;
+    margin: 0px;
+  }
+  .carrito-contenedor img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .division {
+    width: 250px;
+  }
+  .carrito-total {
+    display: flex;
+    width: 280px;
+  }
+  .carrito-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+  }
+
+  .hero-info h1 {
+    font-size: 40px;
+  }
+  .hero-info h2 {
+    font-size: 25px;
+  }
+  .hero-info p {
+    font-size: 12px;
+  }
+
+  .link a {
+    font-size: 12px;
+  }
+
+  .contenedor-izq p {
+    font-size: 13px;
+  }
+
+  .contenedor-izq img {
+    width: 35px;
+  }
+
+  #hero img {
+    width: 200px;
+    border-radius: 150px;
+  }
+}
