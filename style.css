@@ -249,7 +249,7 @@ main {
   flex-direction: column;
   justify-content: center;
   gap: 15px;
-  width: 220px;
+  width: 230px;
 }
 .card-titulo {
   display: flex;
@@ -304,6 +304,8 @@ main {
   padding: 5px 10px;
   border-radius: 30px;
   border: 2px solid #ffffff;
+  width: 60px;
+  text-align: center;
 }
 
 .boton span {
