@@ -222,6 +222,7 @@
   .beneficios-card {
     flex-direction: column;
     width: 280px;
+    height: 250px;
   }
 }
 
@@ -267,7 +268,7 @@
     border: 2px solid #ffffff;
     padding: 10px;
     border-radius: 10px;
-    width: 250px;
+    width: 280px;
   }
 }
 
