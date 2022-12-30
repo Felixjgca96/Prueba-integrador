@@ -428,6 +428,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   flex-direction: column;
   border-bottom: 2px solid #ffffff;
   gap: 10px;
@@ -436,11 +437,13 @@ main {
   height: 100px;
   padding: 15px;
   margin: 0px;
+  border-style: ridge;
 }
 .datos {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   width: 230px;
   gap: 20px;
 }
@@ -500,6 +503,7 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
+  border-style: ridge;
 }
 
 .footer {
