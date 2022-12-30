@@ -433,9 +433,9 @@ main {
   border-bottom: 2px solid #ffffff;
   gap: 10px;
   border-radius: 10px;
-  width: 250px;
+  width: 260px;
   height: 100px;
-  padding: 15px;
+  padding: 15px 10px;
   margin: 0px;
   border-style: ridge;
 }
@@ -446,6 +446,7 @@ main {
   text-align: center;
   width: 230px;
   gap: 20px;
+  padding: 0px 0px;
 }
 .datos img {
   width: 30px;
@@ -464,7 +465,7 @@ main {
   gap: 10px;
   padding: 15px;
   border-radius: 10px;
-  width: 250px;
+  width: 260px;
 }
 .redes {
   display: flex;
@@ -503,7 +504,6 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-style: ridge;
 }
 
 .footer {
