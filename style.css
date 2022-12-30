@@ -142,14 +142,13 @@ main {
   gap: 20px;
 }
 
-.beneficios-texto {
+.beneficios-titulo {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
   gap: 10px;
 }
-.beneficios-texto h2 {
+.beneficios-titulo h2 {
   font-size: 55px;
   font-weight: 700;
 }
@@ -161,33 +160,33 @@ main {
 }
 .beneficios-contenedor {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   gap: 20px;
 }
 .beneficios-card {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: 10px;
-  width: 250px;
-  height: 250px;
   padding: 10px;
   border-left: 2px solid #ffffff;
   border-right: 2px solid #ffffff;
   border-radius: 10px;
+  width: 90%;
 }
 .beneficios-card-izq {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 200px;
+  padding: 0px 10px;
 }
 .beneficios-card-izq img {
   border-radius: 1rem;
-  width: 30%;
+  width: 80px;
+  height: 80px;
 }
 
 .beneficios-card-izq h2 {
@@ -198,7 +197,8 @@ main {
   font-size: 16px;
   font-weight: 200;
   text-align: justify;
-  padding: 0px 20px;
+  padding: 0px 10px;
+  width: 60%;
 }
 
 #productos {
@@ -225,7 +225,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
 }
 .productos-card {
   display: flex;
@@ -255,6 +255,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .card-titulo h3 {
   font-size: 22px;
@@ -266,6 +267,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  width: 100%;
 }
 .tallas h4 {
   font-size: 18px;
@@ -285,13 +287,15 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  padding: 5px;
 }
 
 .precio {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 }
 .precio h4 {
   font-size: 18px;
@@ -305,6 +309,7 @@ main {
   border-radius: 30px;
   border: 2px solid #ffffff;
   width: 60px;
+  height: 30px;
   text-align: center;
 }
 
@@ -427,6 +432,7 @@ main {
   gap: 10px;
   padding: 15px;
   border-radius: 10px;
+  width: 95%;
 }
 .datos {
   display: flex;
@@ -450,9 +456,11 @@ main {
   gap: 10px;
   padding: 15px;
   border-radius: 10px;
+  width: 95%;
 }
 .redes {
   display: flex;
+  justify-content: center;
   gap: 20px;
   list-style-type: none;
 }
@@ -537,7 +545,7 @@ main {
   align-items: center;
   max-width: 1300px;
   padding: 10px;
-  width: 300px;
+  width: 290px;
   border-bottom: 2px solid #ffffff;
   border-left: 2px solid #ffffff;
   border-right: 2px solid #ffffff;
@@ -547,7 +555,7 @@ main {
   margin-bottom: 50px;
 }
 #formulario h2 {
-  font-size: 45px;
+  font-size: 35px;
   font-weight: 700;
 }
 
@@ -562,6 +570,7 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 250px;
 }
 
 .enviar-formulario {

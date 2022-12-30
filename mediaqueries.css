@@ -66,41 +66,6 @@
   #menu-toggle:checked + .navbar-list {
     display: flex;
   }
-
-  .beneficios-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 0px;
-    width: 90%;
-    height: 200px;
-    padding: 0px;
-  }
-
-  .beneficios-card-izq {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-    padding: 0px;
-  }
-  .beneficios-card-izq img {
-    width: 100px;
-  }
-
-  .beneficios-card-izq h2 {
-    font-size: 25px;
-    width: 180px;
-  }
-  .beneficios-card p {
-    font-size: 16px;
-    font-weight: 200;
-    text-align: justify;
-    padding: 0px 20px;
-  }
 }
 
 @media (max-width: 800px) {
@@ -149,20 +114,6 @@
   }
 }
 @media (max-width: 700px) {
-  .productos-contenedor {
-    gap: 10px;
-    flex-direction: column;
-  }
-  .productos-card {
-    gap: 5px;
-    border: 2px solid #ffffff;
-    padding: 5px;
-  }
-  .info-contacto {
-    width: 280px;
-    height: 290px;
-  }
-
   .footer-contenedor {
     display: flex;
     flex-direction: column;
@@ -170,62 +121,63 @@
     align-items: center;
     gap: 10px;
   }
-
-  .productos-card {
-    flex-direction: row;
-    width: 400px;
-    gap: 10px;
-  }
 }
 
 @media (max-width: 645px) {
-  .iframe {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-left: 2px solid #ffffff;
-    border-right: 2px solid #ffffff;
-    border-radius: 10px;
-    padding: 10px;
-    width: 280px;
+  .form-contacto {
+    width: 380px;
     height: 385px;
   }
 
-  .iframe iframe {
-    width: 250px;
-    height: 300px;
-  }
-  #beneficios {
-    width: 90%;
-  }
-  .beneficios-texto {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 90%;
-  }
-  .beneficios-texto h2 {
-    font-size: 55px;
-    font-weight: 700;
+  .info-contacto {
+    width: 380px;
+    height: 260px;
   }
 
-  .beneficios-texto p {
-    font-size: 20px;
-    font-weight: 200;
-    text-align: justify;
-    width: 90%;
+  .contenedor-datos {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    padding-top: 0px;
   }
-  .beneficios-card {
-    flex-direction: column;
-    width: 280px;
+
+  .datos {
+    display: flex;
+    justify-content: space-between;
+  }
+  .contenedor-redes {
+    width: 250px;
+  }
+  .iframe {
+    width: 380px;
+    height: 330px;
+  }
+
+  .iframe iframe {
+    width: 350px;
     height: 250px;
   }
 }
 
+@media (max-width: 600px) {
+  .beneficios-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .beneficios-card p {
+    padding: 0px 10px;
+    width: 95%;
+  }
+  .productos-card {
+    flex-direction: row;
+    width: 95%;
+  }
+  .precio-compra {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 @media (max-width: 500px) {
   .hero-info h1 {
     font-size: 48px;
@@ -258,17 +210,25 @@
   }
 }
 
-@media (max-width: 450px) {
-  .productos-card {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    border: 2px solid #ffffff;
-    padding: 10px;
-    border-radius: 10px;
+@media (max-width: 430px) {
+  .form-contacto {
     width: 280px;
+    height: 385px;
+  }
+
+  .info-contacto {
+    width: 280px;
+    height: 285px;
+  }
+
+  .iframe {
+    width: 280px;
+    height: 330px;
+  }
+
+  .iframe iframe {
+    width: 250px;
+    height: 250px;
   }
 }
 
@@ -331,4 +291,31 @@
     width: 200px;
     border-radius: 150px;
   }
+  .productos-card {
+    flex-direction: column;
+    width: 250px;
+  }
+  .precio-compra {
+    flex-direction: row;
+    gap: 5px;
+    padding: 5px;
+  }
 }
+
+/* .iframe {display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    width: 280px;
+    height: 385px;
+  }
+
+  .iframe iframe {
+    width: 250px;
+    height: 300px;
+  }{ */
