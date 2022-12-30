@@ -445,8 +445,9 @@ main {
   align-items: center;
   text-align: center;
   width: 230px;
-  gap: 20px;
+  gap: 10px;
   padding: 0px 0px;
+  border-style: ridge;
 }
 .datos img {
   width: 30px;
