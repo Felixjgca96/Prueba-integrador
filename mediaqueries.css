@@ -230,6 +230,16 @@
     width: 250px;
     height: 250px;
   }
+
+  .productos-card {
+    flex-direction: column;
+    width: 250px;
+  }
+  .precio-compra {
+    flex-direction: row;
+    gap: 5px;
+    padding: 5px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -291,31 +301,4 @@
     width: 200px;
     border-radius: 150px;
   }
-  .productos-card {
-    flex-direction: column;
-    width: 250px;
-  }
-  .precio-compra {
-    flex-direction: row;
-    gap: 5px;
-    padding: 5px;
-  }
 }
-
-/* .iframe {display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-left: 2px solid #ffffff;
-    border-right: 2px solid #ffffff;
-    border-radius: 10px;
-    padding: 10px;
-    width: 280px;
-    height: 385px;
-  }
-
-  .iframe iframe {
-    width: 250px;
-    height: 300px;
-  }{ */
