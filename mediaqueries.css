@@ -131,23 +131,9 @@
 
   .info-contacto {
     width: 380px;
-    height: 260px;
+    height: 220px;
   }
 
-  .contenedor-datos {
-    display: flex;
-    justify-content: center;
-    width: 250px;
-    padding-top: 0px;
-  }
-
-  .datos {
-    display: flex;
-    justify-content: space-between;
-  }
-  .contenedor-redes {
-    width: 250px;
-  }
   .iframe {
     width: 380px;
     height: 330px;
@@ -171,7 +157,7 @@
   }
   .productos-card {
     flex-direction: row;
-    width: 95%;
+    width: 400px;
   }
   .precio-compra {
     flex-direction: column;
@@ -230,7 +216,6 @@
     width: 250px;
     height: 250px;
   }
-
   .productos-card {
     flex-direction: column;
     width: 250px;
