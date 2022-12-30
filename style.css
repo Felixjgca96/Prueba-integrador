@@ -2,10 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
   color: white;
 }
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
@@ -431,8 +429,6 @@ main {
   text-align: center;
   flex-direction: column;
   gap: 15px;
-  border-radius: 10px;
-  height: 100px;
 }
 .datos {
   display: flex;
