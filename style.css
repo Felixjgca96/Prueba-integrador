@@ -430,12 +430,9 @@ main {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  border-bottom: 2px solid #ffffff;
-  gap: 10px;
+  gap: 15px;
   border-radius: 10px;
   height: 100px;
-
-  border-style: ridge;
 }
 .datos {
   display: flex;
@@ -443,7 +440,6 @@ main {
   align-items: center;
   text-align: center;
   gap: 10px;
-  border-style: ridge;
 }
 .datos img {
   width: 30px;
