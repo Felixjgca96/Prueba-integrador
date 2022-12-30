@@ -439,9 +439,10 @@ main {
 }
 .datos {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 230px;
+  gap: 20px;
 }
 .datos img {
   width: 30px;
@@ -481,6 +482,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 10px;
   border-left: 2px solid #ffffff;
   border-right: 2px solid #ffffff;
@@ -492,6 +494,12 @@ main {
 
 .iframe iframe {
   border-radius: 10px;
+}
+.iframe p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .footer {
