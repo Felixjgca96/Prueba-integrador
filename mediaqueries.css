@@ -14,6 +14,11 @@
     width: 530px;
     height: 300px;
   }
+  .info-contacto {
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    height: 385px;
+  }
 }
 
 @media (max-width: 965px) {
@@ -150,10 +155,14 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    height: auto;
+    padding: 10px 0px;
+  }
+  .beneficios-card-izq {
+    gap: 10px;
   }
   .beneficios-card p {
     padding: 0px 10px;
-    width: 95%;
   }
   .productos-card {
     flex-direction: row;

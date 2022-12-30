@@ -173,7 +173,8 @@ main {
   border-left: 2px solid #ffffff;
   border-right: 2px solid #ffffff;
   border-radius: 10px;
-  width: 90%;
+  width: 100%;
+  height: 85px;
 }
 .beneficios-card-izq {
   display: flex;
@@ -185,12 +186,12 @@ main {
 }
 .beneficios-card-izq img {
   border-radius: 1rem;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
 }
 
 .beneficios-card-izq h2 {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 600;
 }
 .beneficios-card p {
@@ -198,7 +199,7 @@ main {
   font-weight: 200;
   text-align: justify;
   padding: 0px 10px;
-  width: 60%;
+  width: 80%;
 }
 
 #productos {
@@ -417,12 +418,10 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-left: 2px solid #ffffff;
-  border-right: 2px solid #ffffff;
   border-radius: 10px;
   padding: 10px;
   width: 280px;
-  height: 385px;
+  height: 200px;
 }
 
 .contenedor-datos {
@@ -442,7 +441,6 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 15px;
   width: 230px;
 }
 .datos img {
