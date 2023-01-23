@@ -724,7 +724,6 @@ main {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border: 2px solid #ffffff;
   width: 160px;
 }
 
@@ -735,7 +734,6 @@ main {
   text-align: center;
   flex-direction: column;
   gap: 5px;
-  border: 2px solid #ffffff;
   width: 80px;
 }
 .carrito-titulo {
@@ -769,7 +767,6 @@ main {
   justify-content: center;
   flex-wrap: nowrap;
   gap: 15px;
-  border: 2px solid #ffffff;
   width: 110px;
 }
 
