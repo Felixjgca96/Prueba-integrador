@@ -211,7 +211,15 @@
   .beneficios-texto p {
     font-size: 16px;
   }
-
+  .form-contacto h3 {
+    font-size: 19px;
+    font-weight: 500;
+  }
+  .imput {
+    font-size: 13px;
+    font-weight: 300;
+    padding: 5px;
+  }
   /* PAGINA INICIAR SESION, REGISTRARSE Y CARRITO */
   #formulario {
     width: 250px;
@@ -262,8 +270,7 @@
   }
 
   .carrito-total h3 {
-    font-size: 14px;
-    font-weight: 500;
+    display: none;
   }
   .carrito-boton {
     padding: 2px;

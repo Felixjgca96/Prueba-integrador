@@ -412,6 +412,8 @@ main {
 }
 
 .form-contacto h3 {
+  display: flex;
+  text-align: center;
   font-size: 22px;
   font-weight: 500;
 }
@@ -493,7 +495,7 @@ main {
 }
 
 .datos p {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 400;
   display: flex;
   justify-content: center;
