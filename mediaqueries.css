@@ -15,7 +15,6 @@
   .navbar-list-link,
   .navbar-list-individuales {
     gap: 5px;
-    width: 320px;
   }
 }
 
@@ -100,6 +99,14 @@
   .navbar-list,
   .navbar-list-individuales {
     flex-direction: column;
+  }
+  /* MODIFICACION DE CARRITO RERSPONSIVE */
+  .carrito {
+    width: 400px;
+  }
+
+  .carrito-contenedor {
+    justify-content: center;
   }
 }
 
@@ -204,8 +211,65 @@
   .beneficios-texto p {
     font-size: 16px;
   }
-}
 
+  /* PAGINA INICIAR SESION, REGISTRARSE Y CARRITO */
+  #formulario {
+    width: 250px;
+    gap: 10px;
+    margin-top: 100px;
+    margin-bottom: 10px;
+  }
+  #formulario h2 {
+    font-size: 25px;
+  }
+
+  .imput-formulario {
+    font-size: 14px;
+    width: 160px;
+    border-radius: 10px;
+  }
+
+  .enviar-formulario {
+    font-size: 20px;
+    border-radius: 10px;
+  }
+
+  /* MODIFICACION DE CARRITO RESPONSIVE */
+  .carrito {
+    margin-top: 80px;
+  }
+}
+@media (max-width: 500px) {
+  /* MODIFICACION CARRITO RESPONSIVE */
+  .carrito {
+    width: 250px;
+  }
+
+  .carrito-contenedor img {
+    height: 60px;
+    width: 60px;
+  }
+
+  .carrito-info {
+    flex-direction: column;
+    width: 100px;
+  }
+
+  .carrito-total span,
+  .carrito-total p {
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .carrito-total h3 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .carrito-boton {
+    padding: 2px;
+    font-size: 20px;
+  }
+}
 @media (max-width: 460px) {
   .contenedor-izq {
     gap: 5px;
