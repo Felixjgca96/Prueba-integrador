@@ -11,370 +11,363 @@
   <body>
     <header>
       <nav class="navbar">
-        <a href="./index.html"
-          ><img class="animado" src="./img/logo.png" alt="logo"
+        <a class="navbar__img" href="./index.html"
+          ><img class="logo" src="./img/logo.png" alt="logo"
         /></a>
-        <div class="responsive">
-          <label for="menu-toggle" class="menu-label">
+        <div class="navbar__list">
+          <label for="menu__toggle" class="menu__label">
             <img class="icono" src="./img/menu.png" alt="" />
           </label>
-          <input id="menu-toggle" type="checkbox" />
-          <ul class="navbar-list">
-            <div class="navbar-list-individuales">
-              <li><a class="animacion" href="#hero">Inicio</a></li>
-              <li><a class="animacion" href="#beneficios">Beneficios</a></li>
-              <li><a class="animacion" href="#productos">Productos</a></li>
-              <li><a class="animacion" href="#contacto">Contacto</a></li>
+          <input id="menu__toggle" type="checkbox" />
+
+          <ul class="navbar__list__link">
+            <div class="lista">
+              <li><a class="lista__link" href="#hero">Inicio</a></li>
+              <li><a class="lista__link" href="#beneficios">Beneficios</a></li>
+              <li><a class="lista__link" href="#productos">Productos</a></li>
+              <li><a class="lista__link" href="#contacto">Contacto</a></li>
             </div>
             <div class="separador"></div>
-            <div class="navbar-list-link">
+            <div class="lista">
               <li>
-                <a class="animacion" href="./registrarse.html">Registrarse</a>
+                <a class="lista__link" href="./registrarse.html">Registrarse</a>
               </li>
               <li>
-                <a class="animacion" href="./iniciars.html">Iniciar sesion</a>
+                <a class="lista__link" href="./iniciars.html">Iniciar sesion</a>
               </li>
             </div>
           </ul>
-          <a href="./carrito.html">
+          <div class="overlay"></div>
+
+          <a class="navbar__list__car" href="./carrito.html">
             <img class="icono" src="./img/carrito2.png" alt=""
           /></a>
         </div>
       </nav>
     </header>
     <main>
-      <section id="hero">
-        <div class="hero-info">
-          <h1>Creación Textil</h1>
-          <h2>Virgen del Valle, C.A.</h2>
-          <p>
+      <section class="hero" id="hero">
+        <div class="hero__info">
+          <h1 class="hero__info__titulo">Creación Textil</h1>
+          <h2 class="hero__info__subtitulo">Virgen del Valle, C.A.</h2>
+          <p class="hero__info__parrafo">
             Nos dedicamos a la producción y comercialización de prendas de
             vestir; mayormente en el rubro deportivo para damas y caballeros.
           </p>
         </div>
-        <img src="./img/logo.png" alt="" />
+        <img class="hero__img" src="./img/logo.png" alt="" />
       </section>
-      <section id="beneficios">
-        <div class="beneficios-titulo">
-          <h2>Beneficios</h2>
-        </div>
-        <div class="beneficios-texto">
-          <p>
-            Al obtener nuestros servicios, cuentas con mucha eficacia al momento
-            de recibir el trabajos.
-          </p>
-        </div>
-        <div class="beneficios-contenedor">
-          <div class="beneficios-card">
-            <div class="beneficios-card-izq">
-              <img src="./img/1.png" alt="" />
-              <h2>Beneficio 1</h2>
+      <section class="beneficios" id="beneficios">
+        <h2 class="beneficios__titulo">Beneficios</h2>
+        <p class="beneficios__parrafo">
+          Al obtener nuestros servicios, cuentas con mucha eficacia al momento
+          de recibir el trabajos.
+        </p>
+        <div class="beneficios__contenedor">
+          <div class="beneficios__contenedor__card">
+            <div class="card__info">
+              <img class="card__info__img" src="./img/1.png" alt="" />
+              <h2 class="card__info__titulo">Beneficio 1</h2>
             </div>
-            <p>
+            <p class="card__parrafo">
               Trabajo responsable y rápido, con buena capacidad de finalizacion
               en cada detalle.
             </p>
           </div>
-          <div class="beneficios-card">
-            <div class="beneficios-card-izq">
-              <img src="./img/2.png" alt="" />
-              <h2>Beneficio 2</h2>
+          <div class="beneficios__contenedor__card">
+            <div class="card__info">
+              <img class="card__info__img" src="./img/2.png" alt="" />
+              <h2 class="card__info__titulo">Beneficio 2</h2>
             </div>
-            <p>
+            <p class="card__parrafo">
               Empresa apasionada por la costura, muy profesional, detallista y
               con buena reputacion.
             </p>
           </div>
-          <div class="beneficios-card">
-            <div class="beneficios-card-izq">
-              <img src="./img/3.png" alt="" />
-              <h2>Beneficio 3</h2>
+          <div class="beneficios__contenedor__card">
+            <div class="card__info">
+              <img class="card__info__img" src="./img/3.png" alt="" />
+              <h2 class="card__info__titulo">Beneficio 3</h2>
             </div>
-            <p>
+            <p class="card__parrafo">
               Excelente manejo de los tiempos a la hora de entregar los trabajos
               y que estos queden de manera correcta.
             </p>
           </div>
         </div>
       </section>
-      <section id="productos">
-        <div class="productos-titulo">
-          <h2>Productos</h2>
-        </div>
-        <div class="productos-contenedor">
-          <div class="productos-card">
-            <img src="./img/franela100.png" alt="" />
-            <div class="card">
-              <div class="card-titulo">
-                <h3>Franela 100% Algodon</h3>
+      <section class="productos" id="productos">
+        <h2 class="productos__titulos">Productos</h2>
+        <div class="productos__contenedor">
+          <div class="productos__contenedor__tarjeta">
+            <img class="tarjeta__img" src="./img/franela100.png" alt="" />
+            <div class="tarjeta__info">
+              <h3 class="tarjeta__info__titulos">Franela 100% Algodon</h3>
+              <div class="tarjeta__info__tallas">
+                <h4 class="tallas">Tallas:</h4>
+                <p class="tallas__numeros">S</p>
+                <p class="tallas__numeros">M</p>
+                <p class="tallas__numeros">L</p>
+                <p class="tallas__numeros">XL</p>
               </div>
-              <div class="tallas">
-                <h4>Tallas:</h4>
-                <p>S</p>
-                <p>M</p>
-                <p>L</p>
-                <p>XL</p>
+              <div class="tarjeta__info__precios">
+                <h4 class="precios__titulos">Precio:</h4>
+                <p class="precios__numeros">8 $</p>
               </div>
-              <div class="precio-compra">
-                <div class="precio">
-                  <h4>Precio:</h4>
-                  <p>8 $</p>
-                </div>
-                <div class="boton">
-                  <span>Comprar</span>
-                </div>
-              </div>
+              <h4 class="tarjeta__info__comprar">Comprar</h4>
             </div>
           </div>
-          <div class="productos-card">
-            <img src="./img/camisapoliester.jpg" alt="" />
-            <div class="card">
-              <div class="card-titulo">
-                <h3>Camisa Poliester</h3>
+          <div class="productos__contenedor__tarjeta">
+            <img class="tarjeta__img" src="./img/camisapoliester.jpg" alt="" />
+            <div class="tarjeta__info">
+              <h3 class="tarjeta__info__titulos">Camisa Poliester</h3>
+              <div class="tarjeta__info__tallas">
+                <h4 class="tallas">Tallas:</h4>
+                <p class="tallas__numeros">S</p>
+                <p class="tallas__numeros">M</p>
+                <p class="tallas__numeros">L</p>
+                <p class="tallas__numeros">XL</p>
               </div>
-              <div class="tallas">
-                <h4>Tallas:</h4>
-                <p>S</p>
-                <p>M</p>
-                <p>L</p>
-                <p>XL</p>
+              <div class="tarjeta__info__precios">
+                <h4 class="precios__titulos">Precio:</h4>
+                <p class="precios__numeros">5 $</p>
               </div>
-              <div class="precio-compra">
-                <div class="precio">
-                  <h4>Precio:</h4>
-                  <p>5 $</p>
-                </div>
-                <div class="boton">
-                  <span>Comprar</span>
-                </div>
-              </div>
+              <h4 class="tarjeta__info__comprar">Comprar</h4>
             </div>
           </div>
-          <div class="productos-card">
-            <img src="./img/conjunto deportivo.jpg" alt="" />
-            <div class="card">
-              <div class="card-titulo">
-                <h3>Conjunto Deportivo</h3>
+          <div class="productos__contenedor__tarjeta">
+            <img
+              class="tarjeta__img"
+              src="./img/conjunto deportivo.jpg"
+              alt=""
+            />
+            <div class="tarjeta__info">
+              <h3 class="tarjeta__info__titulos">Conjunto Deportivo</h3>
+              <div class="tarjeta__info__tallas">
+                <h4 class="tallas">Tallas:</h4>
+                <p class="tallas__numeros">S</p>
+                <p class="tallas__numeros">M</p>
+                <p class="tallas__numeros">L</p>
               </div>
-              <div class="tallas">
-                <h4>Tallas:</h4>
-                <p>S</p>
-                <p>M</p>
-                <p>L</p>
+              <div class="tarjeta__info__precios">
+                <h4 class="precios__titulos">Precio:</h4>
+                <p class="precios__numeros">15 $</p>
               </div>
-              <div class="precio-compra">
-                <div class="precio">
-                  <h4>Precio:</h4>
-                  <p>15 $</p>
-                </div>
-                <div class="boton">
-                  <span>Comprar</span>
-                </div>
-              </div>
+              <h4 class="tarjeta__info__comprar">Comprar</h4>
             </div>
           </div>
-          <div class="productos-card">
-            <img src="./img/chaquetaimpermeable.jpg" alt="" />
-            <div class="card">
-              <div class="card-titulo">
-                <h3>Chaqueta Impermeable</h3>
+          <div class="productos__contenedor__tarjeta">
+            <img
+              class="tarjeta__img"
+              src="./img/chaquetaimpermeable.jpg"
+              alt=""
+            />
+            <div class="tarjeta__info">
+              <h3 class="tarjeta__info__titulos">Chaqueta Impermeable</h3>
+              <div class="tarjeta__info__tallas">
+                <h4 class="tallas">Tallas:</h4>
+                <p class="tallas__numeros">L</p>
+                <p class="tallas__numeros">XL</p>
+                <p class="tallas__numeros">XXL</p>
               </div>
-              <div class="tallas">
-                <h4>Tallas:</h4>
-                <p>L</p>
-                <p>XL</p>
-                <p>XXL</p>
+              <div class="tarjeta__info__precios">
+                <h4 class="precios__titulos">Precio:</h4>
+                <p class="precios__numeros">12 $</p>
               </div>
-              <div class="precio-compra">
-                <div class="precio">
-                  <h4>Precio:</h4>
-                  <p>12 $</p>
-                </div>
-                <div class="boton">
-                  <span>Comprar</span>
-                </div>
-              </div>
+              <h4 class="tarjeta__info__comprar">Comprar</h4>
             </div>
           </div>
-          <div class="productos-card">
-            <img src="./img/uniformedeportivo.jpg" alt="" />
-            <div class="card">
-              <div class="card-titulo">
-                <h3>Uniforme Deportivo</h3>
+          <div class="productos__contenedor__tarjeta">
+            <img
+              class="tarjeta__img"
+              src="./img/uniformedeportivo.jpg"
+              alt=""
+            />
+            <div class="tarjeta__info">
+              <h3 class="tarjeta__info__titulos">Uniforme Deportivo</h3>
+              <div class="tarjeta__info__tallas">
+                <h4 class="tallas">Tallas:</h4>
+                <p class="tallas__numeros">S</p>
+                <p class="tallas__numeros">M</p>
+                <p class="tallas__numeros">L</p>
+                <p class="tallas__numeros">XL</p>
               </div>
-              <div class="tallas">
-                <h4>Tallas:</h4>
-                <p>S</p>
-                <p>M</p>
-                <p>L</p>
-                <p>XL</p>
+              <div class="tarjeta__info__precios">
+                <h4 class="precios__titulos">Precio:</h4>
+                <p class="precios__numeros">20 $</p>
               </div>
-              <div class="precio-compra">
-                <div class="precio">
-                  <h4>Precio:</h4>
-                  <p>20 $</p>
-                </div>
-                <div class="boton">
-                  <span>Comprar</span>
-                </div>
-              </div>
+              <h4 class="tarjeta__info__comprar">Comprar</h4>
             </div>
           </div>
-          <div class="productos-card">
-            <img src="./img/jogger.jpg" alt="" />
-            <div class="card">
-              <div class="card-titulo">
-                <h3>Jogger Unisex</h3>
+          <div class="productos__contenedor__tarjeta">
+            <img class="tarjeta__img" src="./img/jogger.jpg" alt="" />
+            <div class="tarjeta__info">
+              <h3 class="tarjeta__info__titulos">Jogger Unisex</h3>
+              <div class="tarjeta__info__tallas">
+                <h4 class="tallas">Tallas:</h4>
+                <p class="tallas__numeros">M</p>
+                <p class="tallas__numeros">XL</p>
+                <p class="tallas__numeros">XXL</p>
               </div>
-              <div class="tallas">
-                <h4>Tallas:</h4>
-                <p>M</p>
-                <p>XL</p>
-                <p>XXL</p>
+              <div class="tarjeta__info__precios">
+                <h4 class="precios__titulos">Precio:</h4>
+                <p class="precios__numeros">10 $</p>
               </div>
-              <div class="precio-compra">
-                <div class="precio">
-                  <h4>Precio:</h4>
-                  <p>10 $</p>
-                </div>
-                <div class="boton">
-                  <span>Comprar</span>
-                </div>
-              </div>
+              <h4 class="tarjeta__info__comprar">Comprar</h4>
             </div>
           </div>
-          <div class="productos-card">
-            <img src="./img/gorro.jpg" alt="" />
-            <div class="card">
-              <div class="card-titulo">
-                <h3>Gorros</h3>
+          <div class="productos__contenedor__tarjeta">
+            <img class="tarjeta__img" src="./img/gorro.jpg" alt="" />
+            <div class="tarjeta__info">
+              <h3 class="tarjeta__info__titulos">Gorros</h3>
+              <div class="tarjeta__info__tallas">
+                <h4 class="tallas">Tallas:</h4>
+                <p class="tallas__numeros">Unica</p>
               </div>
-              <div class="tallas">
-                <h4>Tallas:</h4>
-                <p>Unica</p>
+              <div class="tarjeta__info__precios">
+                <h4 class="precios__titulos">Precio:</h4>
+                <p class="precios__numeros">7 $</p>
               </div>
-              <div class="precio-compra">
-                <div class="precio">
-                  <h4>Precio:</h4>
-                  <p>7 $</p>
-                </div>
-                <div class="boton">
-                  <span>Comprar</span>
-                </div>
-              </div>
+              <h4 class="tarjeta__info__comprar">Comprar</h4>
             </div>
           </div>
-          <div class="productos-card">
-            <img src="./img/franelilla.png" alt="" />
-            <div class="card">
-              <div class="card-titulo">
-                <h3>Franelillas</h3>
+          <div class="productos__contenedor__tarjeta">
+            <img class="tarjeta__img" src="./img/franelilla.png" alt="" />
+            <div class="tarjeta__info">
+              <h3 class="tarjeta__info__titulos">Franelillas</h3>
+              <div class="tarjeta__info__tallas">
+                <h4 class="tallas">Tallas:</h4>
+                <p class="tallas__numeros">S</p>
+                <p class="tallas__numeros">M</p>
               </div>
-              <div class="tallas">
-                <h4>Tallas:</h4>
-                <p>S</p>
-                <p>M</p>
+              <div class="tarjeta__info__precios">
+                <h4 class="precios__titulos">Precio:</h4>
+                <p class="precios__numeros">5 $</p>
               </div>
-              <div class="precio-compra">
-                <div class="precio">
-                  <h4>Precio:</h4>
-                  <p>5 $</p>
-                </div>
-                <div class="boton">
-                  <span>Comprar</span>
-                </div>
-              </div>
+              <h4 class="tarjeta__info__comprar">Comprar</h4>
             </div>
           </div>
         </div>
       </section>
-      <section id="contacto">
-        <h2>Contacto</h2>
-        <div class="contacto-contenedor">
-          <div class="form-contacto">
-            <h3>Formulario de Contacto</h3>
-            <form class="form">
-              <label for="nombre">Nombre y apellido:</label>
+      <section class="contacto" id="contacto">
+        <h2 class="contacto__titulo">Contacto</h2>
+        <div class="contacto__contenedor">
+          <div class="contacto__contenedor__formulario">
+            <h3 class="formulario__titulo">Formulario de Contacto</h3>
+            <form class="formulario__info">
+              <label class="formulario__info__titulos" for="nombre"
+                >Nombre y apellido:</label
+              >
               <input
-                class="imput"
+                class="formulario__info__cajon"
                 id="nombre"
                 type="text"
                 placeholder="Ingrese nombre y apellido"
               />
-              <label for="correo">Email:</label>
+              <label class="formulario__info__titulos" for="correo"
+                >Email:</label
+              >
               <input
-                class="imput"
+                class="formulario__info__cajon"
                 type="email"
                 id="correo"
                 placeholder="Ingrese mail"
               />
-              <label for="telefono">Numero de contacto:</label>
+              <label class="formulario__info__titulos" for="telefono"
+                >Numero de contacto:</label
+              >
               <input
-                class="imput"
+                class="formulario__info__cajon"
                 type="number telefono"
                 id="telefono"
                 placeholder="Ingrese telefono"
               />
-              <input class="imput-enviar" type="submit" value="Enviar" />
+              <input
+                class="formulario__info__boton"
+                type="submit"
+                value="Enviar"
+              />
             </form>
-            <p>En menos de 24 horas, se estaran comunicando con usted.</p>
+            <p class="formulario__parrafo">
+              En menos de 24 horas, se estaran comunicando con usted.
+            </p>
           </div>
-          <div class="info-contacto">
-            <div class="contenedor-datos">
-              <div class="datos">
-                <img src="./img/gmail.png" alt="" />
-                <p>Felixjgca@gmail.com</p>
+          <div class="contacto__contenedor__info">
+            <div class="info__datos">
+              <div class="info__datos__contenedor">
+                <img class="contenedor__img" src="./img/gmail.png" alt="" />
+                <p class="contenedor__info">Felixjgca@gmail.com</p>
               </div>
-              <div class="datos">
-                <img src="./img/tlf.png" alt="" />
-                <p>+54 9 11-27700307</p>
+              <div class="info__datos__contenedor">
+                <img class="contenedor__img" src="./img/tlf.png" alt="" />
+                <p class="contenedor__info">+54 9 11-27700307</p>
               </div>
             </div>
-            <div class="contenedor-redes">
-              <ul class="redes">
+            <div class="info__redes">
+              <ul class="info__redes__contenedor">
                 <li>
-                  <a href="https://m.facebook.com/Felixc6" target="_blank"
-                    ><img class="animado" src="./img/face.png" alt="facelogo"
+                  <a
+                    class="contenedor__link"
+                    href="https://m.facebook.com/Felixc6"
+                    target="_blank"
+                    ><img
+                      class="contenedor__link__img"
+                      src="./img/face.png"
+                      alt="facelogo"
                   /></a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/felixjgca/" target="_blank"
-                    ><img class="animado" src="./img/ig.png" alt="iglogo"
+                  <a
+                    class="contenedor__link"
+                    href="https://www.instagram.com/felixjgca/"
+                    target="_blank"
+                    ><img
+                      class="contenedor__link__img"
+                      src="./img/ig.png"
+                      alt="iglogo"
                   /></a>
                 </li>
                 <li>
-                  <a href="https://wa.me/5491127700307" target="_blank">
-                    <img class="animado" src="./img/wa.png" alt="walogo"
+                  <a
+                    class="contenedor__link"
+                    href="https://wa.me/5491127700307"
+                    target="_blank"
+                  >
+                    <img
+                      class="contenedor__link__img"
+                      src="./img/wa.png"
+                      alt="walogo"
                   /></a>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="iframe">
-            <div>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26415.56259096972!2d-64.63988583433228!3d10.205253141433754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2d74183d40f315%3A0xdfe80aa148f7489!2sC.C%20Regina!5e0!3m2!1ses!2sve!4v1671220692299!5m2!1ses!2sve"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-            <p>Puerto La Cruz.</p>
-            <p>Estado Anzoategui.</p>
+          <div class="contacto__contenedor__iframe">
+            <iframe
+              class="iframe"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26415.56259096972!2d-64.63988583433228!3d10.205253141433754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2d74183d40f315%3A0xdfe80aa148f7489!2sC.C%20Regina!5e0!3m2!1ses!2sve!4v1671220692299!5m2!1ses!2sve"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <p class="iframe__parrafo">Puerto La Cruz.</p>
+            <p class="iframe__parrafo">Estado Anzoategui.</p>
           </div>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="footer-contenedor">
-        <div class="contenedor-izq">
-          <p>Creación Textil Virgen del Valle, C.A. 2022</p>
-          <img src="./img/logo.png" alt="" />
+      <div class="footer__contenedor">
+        <div class="footer__contenedor__info">
+          <p class="info__titulo">
+            Creación Textil Virgen del Valle, C.A. 2022
+          </p>
+          <img class="info__img" src="./img/logo.png" alt="" />
         </div>
-        <ul class="contenedor-der">
-          <li><a class="animacion" href="#">Privacidad</a></li>
-          <li><a class="animacion" href="#">Términos de uso</a></li>
+        <ul class="footer__contenedor__link">
+          <li><a class="link" href="#">Privacidad</a></li>
+          <li><a class="link" href="#">Términos de uso</a></li>
         </ul>
       </div>
     </footer>

@@ -4,89 +4,101 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IniciarSesión-CreacionTextil</title>
+    <title>Car-CreacionTextil</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./mediaqueries.css" />
   </head>
   <body>
     <header>
-      <nav class="navbar-formularios">
-        <a href="./index.html"
-          ><img class="animado" src="./img/logo.png" alt="logo"
+      <nav class="navegacion">
+        <a class="navegacion__paginas" href="./index.html"
+          ><img class="logo" src="./img/logo.png" alt="logo"
         /></a>
-        <a href="#"> <img class="icono" src="./img/carrito2.png" alt="" /></a>
+        <a class="navegacion__paginas" href="#">
+          <img class="icono" src="./img/carrito2.png" alt=""
+        /></a>
       </nav>
     </header>
     <main>
       <div class="carrito">
-        <h2>Tu Pedido</h2>
-        <div class="carrito-contenedor">
-          <div class="carrito-info">
-            <img src="./img/jogger.jpg" alt="jogger" />
-            <h3 class="carrito-titulo">Jogger</h3>
+        <h2 class="carrito__titulo">Tu Pedido</h2>
+        <div class="carrito__contenedor">
+          <div class="carrito__contenedor__superior">
+            <img class="superior__img" src="./img/jogger.jpg" alt="jogger" />
+            <h3 class="superior__titulo">Jogger</h3>
           </div>
 
-          <div class="carrito-precio-monto">
-            <p class="carrito-precio">Precio</p>
-            <span class="carrito-monto">10 $</span>
+          <div class="carrito__contenedor__medio">
+            <h4 class="medio__titulo">Precio</h4>
+            <span class="medio__monto">10 $</span>
           </div>
 
-          <div class="carrito-detalles">
-            <span class="carrito-numeral menos">-</span>
-            <span class="carrito-cantidades">2</span>
-            <span class="carrito-numeral mas">+</span>
+          <div class="carrito__contenedor__inferior">
+            <span class="inferior__signos">-</span>
+            <span class="inferior__cantidad">2</span>
+            <span class="inferior__signos">+</span>
           </div>
         </div>
-        <div class="carrito-contenedor">
-          <div class="carrito-info">
-            <img src="./img/gorro.jpg" alt="gorros" />
-            <h3 class="carrito-titulo">Gorros</h3>
+        <div class="carrito__contenedor">
+          <div class="carrito__contenedor__superior">
+            <img class="superior__img" src="./img/gorro.jpg" alt="jogger" />
+            <h3 class="superior__titulo">Gorro</h3>
           </div>
-          <div class="carrito-precio-monto">
-            <p class="carrito-precio">Precio</p>
-            <span class="carrito-monto">7 $</span>
+
+          <div class="carrito__contenedor__medio">
+            <h4 class="medio__titulo">Precio</h4>
+            <span class="medio__monto">7 $</span>
           </div>
-          <div class="carrito-detalles">
-            <span class="carrito-numeral menos">-</span>
-            <span class="carrito-cantidades">1</span>
-            <span class="carrito-numeral mas">+</span>
+
+          <div class="carrito__contenedor__inferior">
+            <span class="inferior__signos">-</span>
+            <span class="inferior__cantidad">1</span>
+            <span class="inferior__signos">+</span>
           </div>
         </div>
-        <div class="carrito-contenedor">
-          <div class="carrito-info">
-            <img src="./img/chaquetaimpermeable.jpg" alt="chaqueta" />
-            <h3 class="carrito-titulo">Chaqueta</h3>
+        <div class="carrito__contenedor">
+          <div class="carrito__contenedor__superior">
+            <img
+              class="superior__img"
+              src="./img/chaquetaimpermeable.jpg"
+              alt="jogger"
+            />
+            <h3 class="superior__titulo">Chaqueta</h3>
           </div>
-          <div class="carrito-precio-monto">
-            <p class="carrito-precio">Precio</p>
-            <span class="carrito-monto">12 $</span>
+
+          <div class="carrito__contenedor__medio">
+            <h4 class="medio__titulo">Precio</h4>
+            <span class="medio__monto">12 $</span>
           </div>
-          <div class="carrito-detalles">
-            <span class="carrito-numeral menos">-</span>
-            <span class="carrito-cantidades">1</span>
-            <span class="carrito-numeral mas">+</span>
+
+          <div class="carrito__contenedor__inferior">
+            <span class="inferior__signos">-</span>
+            <span class="inferior__cantidad">1</span>
+            <span class="inferior__signos">+</span>
           </div>
         </div>
 
-        <span class="division"></span>
+        <span class="carrito__division"></span>
 
-        <div class="carrito-total">
-          <p>Total:</p>
-          <h3>Productos (4)</h3>
-          <span>39 $</span>
+        <div class="carrito__total">
+          <h3 class="carrito__total__titulo">Total:</h3>
+          <p class="carrito__total__productos">Productos (4)</p>
+          <h4 class="carrito__total__monto">39 $</h4>
         </div>
-        <a href="./index.html" class="carrito-boton">Comprar</a>
+        <a class="carrito__boton" href="./index.html">Comprar</a>
       </div>
     </main>
     <footer class="footer">
-      <div class="footer-contenedor">
-        <div class="contenedor-izq">
-          <p>Creación Textil Virgen del Valle, C.A. 2022</p>
-          <img src="./img/logo.png" alt="" />
+      <div class="footer__contenedor">
+        <div class="footer__contenedor__info">
+          <p class="info__titulo">
+            Creación Textil Virgen del Valle, C.A. 2022
+          </p>
+          <img class="info__img" src="./img/logo.png" alt="" />
         </div>
-        <ul class="contenedor-der">
-          <li><a href="#">Privacidad</a></li>
-          <li><a href="#">Términos de uso</a></li>
+        <ul class="footer__contenedor__link">
+          <li><a class="link" href="#">Privacidad</a></li>
+          <li><a class="link" href="#">Términos de uso</a></li>
         </ul>
       </div>
     </footer>

@@ -1,57 +1,74 @@
-@media (max-width: 1110px) {
-  #hero img {
-    width: 320px;
+@media (max-width: 1200px) {
+  .hero__img {
+    width: 350px;
   }
-  .hero-info h1 {
-    font-size: 55px;
+  .hero__info__titulo {
+    font-size: 60px;
   }
-  .hero-info h2 {
-    font-size: 45px;
+  .hero__info__subtitulo {
+    font-size: 50px;
   }
-  .hero-info p {
-    font-size: 16px;
+  .hero__info__parrafo {
+    font-size: 18px;
     text-align: center;
-  }
-  .navbar-list-link,
-  .navbar-list-individuales {
-    gap: 5px;
   }
 }
 
+@media (max-width: 1110px) {
+  .hero__img {
+    width: 320px;
+  }
+  .hero__info__titulo {
+    font-size: 55px;
+  }
+  .hero__info__subtitulo {
+    font-size: 45px;
+  }
+  .hero__info__parrafo {
+    font-size: 16px;
+  }
+  .lista {
+    gap: 5px;
+  }
+}
 @media (max-width: 1050px) {
-  .info-contacto {
+  .contacto__contenedor__info {
     order: 3;
   }
 }
+
 @media (max-width: 1020px) {
-  #hero {
+  .hero {
     flex-direction: column;
     gap: 10px;
   }
-  #hero img {
+  .hero__img {
     width: 400px;
   }
-  .hero-info h1 {
+  .hero__info__titulo {
     font-size: 65px;
   }
-  .hero-info h2 {
+  .hero__info__subtitulo {
     font-size: 55px;
   }
-  .hero-info p {
+  .hero__info__parrafo {
     font-size: 20px;
-    text-align: center;
+  }
+
+  .lista {
+    font-size: 18px;
   }
 }
 
 @media (max-width: 970px) {
-  .responsive {
+  .lista {
+    font-size: 20px;
+  }
+  .navbar__list {
     display: flex;
     justify-content: flex-end;
   }
-  .navbar {
-    justify-content: space-between;
-  }
-  .navbar-list {
+  .navbar__list__link {
     position: absolute;
     top: 98px;
     left: 15%;
@@ -72,46 +89,74 @@
   .separador {
     display: none;
   }
-  .menu-label {
+  .menu__label {
     display: flex;
     order: 2;
     cursor: pointer;
   }
 
-  #menu-toggle:checked + .navbar-list {
+  #menu__toggle:checked + .navbar__list__link {
     display: flex;
     justify-content: center;
-    gap: 5px;
+    gap: 15px;
   }
 }
 @media (max-width: 780px) {
-  .footer-contenedor {
+  .footer__contenedor {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5px;
   }
-  .contenedor-izq img {
+  .info__img {
     width: 30px;
   }
 }
+
 @media (max-width: 710px) {
-  .navbar-list,
-  .navbar-list-individuales {
+  .navbar__list__link,
+  .lista {
     flex-direction: column;
+    gap: 10px;
   }
-  /* MODIFICACION DE CARRITO RERSPONSIVE */
+  .navbar__list__link {
+    padding: 10px 30px;
+  }
+  /* MODIFICACION DE PAGINA CAR  */
   .carrito {
     width: 400px;
   }
 
-  .carrito-contenedor {
+  .carrito__contenedor {
     justify-content: center;
   }
 }
 
+@media (max-width: 675px) {
+  .contacto__contenedor__formulario {
+    width: 480px;
+  }
+
+  .contacto__contenedor__iframe {
+    width: 480px;
+  }
+
+  .iframe {
+    width: 440px;
+  }
+
+  .contacto__contenedor__info {
+    width: 480px;
+  }
+
+  .info__datos {
+    flex-direction: row;
+    width: 440px;
+  }
+}
+
 @media (max-width: 665px) {
-  .hero-info {
+  .hero__info {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -119,193 +164,289 @@
     width: 100%;
     gap: 20px;
   }
-  #hero img {
+  .hero__img {
     width: 320px;
   }
-  .hero-info h1 {
+  .hero__info__titulo {
     font-size: 55px;
     width: 95%;
   }
-  .hero-info h2 {
+  .hero__info__subtitulo {
     font-size: 45px;
     width: 95%;
   }
-  .hero-info p {
+  .hero__info__parrafo {
     font-size: 16px;
     text-align: center;
     width: 95%;
   }
 }
 
+@media (max-width: 620px) {
+  .contacto__contenedor__formulario {
+    width: 430px;
+  }
+
+  .contacto__contenedor__iframe {
+    width: 430px;
+  }
+
+  .iframe {
+    width: 400px;
+  }
+
+  .contacto__contenedor__info {
+    width: 430px;
+  }
+
+  .info__datos {
+    flex-direction: column;
+    width: 400px;
+  }
+
+  /* SECCION PRODUCTOS  (CARTAS)*/
+
+  .productos__contenedor__tarjeta {
+    width: 430px;
+  }
+
+  .tarjeta__info {
+    width: 380px;
+  }
+}
 @media (max-width: 560px) {
-  header a img {
+  /* SECCION PRODUCTOS  (CARTAS)*/
+
+  .productos__contenedor__tarjeta {
+    width: 380px;
+  }
+
+  .tarjeta__info {
+    width: 330px;
+  }
+
+  /* ............................. */
+  .contacto__contenedor__formulario {
+    width: 380px;
+  }
+
+  .contacto__contenedor__iframe {
+    width: 380px;
+  }
+
+  .iframe {
+    width: 340px;
+  }
+
+  .contacto__contenedor__info {
+    width: 380px;
+  }
+
+  .info__datos {
+    flex-direction: column;
+    width: 340px;
+  }
+  .formulario__titulo {
+    font-size: 19px;
+    font-weight: 500;
+  }
+  .formulario__info__cajon {
+    font-size: 13px;
+    font-weight: 300;
+    padding: 5px;
+  }
+
+  .logo {
     width: 60px;
   }
+
   header {
     height: 80px;
   }
-  #hero {
+
+  .hero {
     margin-top: 80px;
   }
-  .navbar-list {
+  .navbar__list__link {
     top: 78px;
-    left: 10%;
-    right: 10%;
-    width: 80%;
-    padding: 15px 0px;
+  }
+  .overlay {
+    top: 78px;
   }
 
-  .navbar-list-link,
-  .navbar-list-individuales {
+  .lista {
     width: auto;
     font-size: 15px;
   }
-  #hero,
-  #benecicios,
-  #productos,
-  #contacto {
+  .hero,
+  .benecicios,
+  .productos,
+  .contacto {
     padding-bottom: 20px;
   }
-  .hero-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 20px;
-  }
-  #hero img {
+
+  .hero__img {
     width: 250px;
   }
-  .hero-info h1 {
+  .hero__info__titulo {
     font-size: 45px;
-    width: 95%;
   }
-  .hero-info h2 {
+  .hero__info__subtitulo {
     font-size: 35px;
-    width: 95%;
   }
-  .hero-info p {
+  .hero__info__parrafo {
     font-size: 14px;
     text-align: justify;
-    width: 95%;
   }
 
-  .beneficios-card {
+  .beneficios__contenedor__card {
     flex-direction: column;
     justify-content: center;
     width: 95%;
     height: auto;
     gap: 5px;
   }
-  .beneficios-card p {
+  .card__parrafo {
     width: 95%;
+    font-size: 16px;
   }
 
-  .beneficios-titulo h2,
-  #productos h2,
-  #contacto h2 {
+  .beneficios__titulo,
+  .productos__titulos,
+  .contacto__titulo {
     font-size: 30px;
   }
 
-  .beneficios-texto p {
-    font-size: 16px;
-  }
-  .form-contacto h3 {
-    font-size: 19px;
-    font-weight: 500;
-  }
-  .imput {
-    font-size: 13px;
-    font-weight: 300;
-    padding: 5px;
-  }
-  /* PAGINA INICIAR SESION, REGISTRARSE Y CARRITO */
-  #formulario {
+  /* PAGINA INICIAR SESION,
+  REGISTRARSE */
+
+  .cuestionario {
     width: 250px;
     gap: 10px;
     margin-top: 100px;
     margin-bottom: 10px;
   }
-  #formulario h2 {
+  .cuestionario__titulo {
     font-size: 25px;
   }
 
-  .imput-formulario {
+  .cuestionario__cajon {
     font-size: 14px;
     width: 160px;
     border-radius: 10px;
   }
 
-  .enviar-formulario {
+  .cuestionario__enviar {
     font-size: 20px;
     border-radius: 10px;
   }
 
-  /* MODIFICACION DE CARRITO RESPONSIVE */
+  /* PAGINA CARRITO */
   .carrito {
     margin-top: 80px;
   }
 }
+
 @media (max-width: 500px) {
-  /* MODIFICACION CARRITO RESPONSIVE */
-  .carrito {
+  .contacto__contenedor__formulario {
+    width: 270px;
+  }
+
+  .contacto__contenedor__iframe {
+    width: 270px;
+  }
+
+  .iframe {
+    width: 240px;
+  }
+
+  .contacto__contenedor__info {
+    width: 270px;
+  }
+
+  .info__datos {
+    flex-direction: column;
     width: 250px;
   }
 
-  .carrito-contenedor img {
+  /* MODIFICACION PAGINA CARRITO  */
+  .carrito {
+    width: 250px;
+  }
+  .carrito__contenedor {
+    gap: 5px;
+    flex-direction: column;
+    width: 100%;
+  }
+  .carrito__contenedor__superior {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .superior__img {
     height: 60px;
     width: 60px;
   }
 
-  .carrito-info {
-    flex-direction: column;
-    width: 100px;
-  }
-
-  .carrito-total span,
-  .carrito-total p {
+  .carrito__total__titulo,
+  .carrito__total__monto {
     font-weight: 600;
     font-size: 18px;
   }
 
-  .carrito-total h3 {
+  .carrito__total__productos {
     display: none;
   }
-  .carrito-boton {
+  .carrito__boton {
     padding: 2px;
     font-size: 20px;
   }
+
+  /* SECCION PRODUCTOS  (CARTAS)*/
+
+  .productos__contenedor__tarjeta {
+    width: 330px;
+  }
+
+  .tarjeta__info {
+    width: 280px;
+  }
 }
 @media (max-width: 460px) {
-  .contenedor-izq {
+  .footer__contenedor__info {
     gap: 5px;
   }
-  .contenedor-izq p {
+  .info__titulo {
     font-size: 12px;
   }
-  .contenedor-izq img {
+  .info__img {
     width: 25px;
   }
-  .contenedor-der a {
+  .link {
     font-size: 12px;
+  }
+  /* SECCION PRODUCTOS  (CARTAS)*/
+
+  .productos__contenedor__tarjeta {
+    width: 250px;
+  }
+
+  .tarjeta__info {
+    width: 230px;
   }
 }
 @media (max-width: 440px) {
-  #hero img {
+  .hero__img {
     width: 180px;
   }
-  .hero-info h1 {
+  .hero__info__titulo {
     font-size: 30px;
-    width: 95%;
   }
-  .hero-info h2 {
+  .hero__info__subtitulo {
     font-size: 25px;
     width: 95%;
   }
-  .hero-info p {
+  .hero__info__parrafo {
     font-size: 13px;
-    text-align: justify;
-    width: 95%;
   }
 }

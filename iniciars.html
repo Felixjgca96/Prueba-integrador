@@ -10,40 +10,44 @@
   </head>
   <body>
     <header>
-      <nav class="navbar-formularios">
-        <a href="./index.html"
-          ><img class="animado" src="./img/logo.png" alt="logo"
+      <nav class="navegacion">
+        <a class="navegacion__paginas" href="./index.html"
+          ><img class="logo" src="./img/logo.png" alt="logo"
         /></a>
-        <a href="#"> <img class="icono" src="./img/usuario.png" alt="" /></a>
+        <a class="navegacion__paginas" href="#">
+          <img class="icono" src="./img/usuario.png" alt=""
+        /></a>
       </nav>
     </header>
     <main>
-      <form id="formulario">
-        <h2>Iniciar Sesión</h2>
+      <form class="cuestionario">
+        <h2 class="cuestionario__titulo">Iniciar Sesión</h2>
         <input
-          class="imput-formulario"
+          class="cuestionario__cajon"
           type="email"
           id="correo"
-          placeholder="Ingrese email"
+          placeholder="Email"
         />
         <input
-          class="imput-formulario"
+          class="cuestionario__cajon"
           type="password"
           id="password"
-          placeholder="Ingrese password"
+          placeholder="Password"
         />
-        <a class="enviar-formulario" href="./index.html">Ingresar</a>
+        <a class="cuestionario__enviar" href="./index.html">Ingresar</a>
       </form>
     </main>
     <footer class="footer">
-      <div class="footer-contenedor">
-        <div class="contenedor-izq">
-          <p>Creación Textil Virgen del Valle, C.A. 2022</p>
-          <img src="./img/logo.png" alt="" />
+      <div class="footer__contenedor">
+        <div class="footer__contenedor__info">
+          <p class="info__titulo">
+            Creación Textil Virgen del Valle, C.A. 2022
+          </p>
+          <img class="info__img" src="./img/logo.png" alt="" />
         </div>
-        <ul class="contenedor-der">
-          <li><a href="#">Privacidad</a></li>
-          <li><a href="#">Términos de uso</a></li>
+        <ul class="footer__contenedor__link">
+          <li><a class="link" href="#">Privacidad</a></li>
+          <li><a class="link" href="#">Términos de uso</a></li>
         </ul>
       </div>
     </footer>
