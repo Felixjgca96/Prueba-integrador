@@ -150,7 +150,7 @@ main {
   border-radius: 50px;
 }
 /* CARRITO */
-.cart {
+.carrito {
   position: absolute;
   top: 100px;
   right: 0;
@@ -168,10 +168,10 @@ main {
   overflow-y: scroll;
   z-index: 2;
   min-width: 375px;
-  transform: translate(250%);
+  transform: translate(300%);
   transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
 }
-.cart h2 {
+.carrito h2 {
   color: white;
   font-size: 20px;
   font-weight: 600;
@@ -182,18 +182,18 @@ main {
   border: 2px solid rgb(69, 72, 69);
   background-color: #2323234e;
 }
-.cart-container {
+.carrito-contenedor {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 /*OCULTAR BARRA DE SCROLL DEL CARRITO*/
 
-.cart::-webkit-scrollbar {
+.carrito::-webkit-scrollbar {
   display: none;
 }
 
-.cart-item {
+.carrito-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -204,7 +204,7 @@ main {
   border-radius: 10px;
 }
 
-.cart-item img {
+.carrito-item img {
   height: 65px;
   width: 65px;
   border-radius: 10px;
@@ -217,7 +217,7 @@ main {
   min-width: 110px;
 }
 
-.item-title {
+.item-titulo {
   color: white;
   font-weight: 600;
   font-size: 14px;
@@ -229,7 +229,7 @@ main {
   font-size: 12px;
 }
 
-.item-price {
+.item-precio {
   background: white;
   background-clip: text;
   color: transparent;
@@ -238,14 +238,14 @@ main {
   font-weight: 800;
 }
 
-.item-handler {
+.item-manipulador {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
 }
 
-.quantity-handler {
+.cantidad-manipulador {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -255,24 +255,24 @@ main {
   font-weight: 400;
 }
 
-.item-quantity {
+.item-cantidad {
   color: white;
 }
 
-.up {
+.mas {
   background-color: #090909;
 
   border: 1px solid rgb(69, 72, 69);
   cursor: pointer;
 }
 
-.down {
+.menos {
   background-color: #090909;
   border: 1px solid rgb(69, 72, 69);
   cursor: pointer;
 }
-.up:hover,
-.down:hover {
+.mas:hover,
+.menos:hover {
   background: rgb(69, 72, 69);
   transition: 0.3s all ease-in;
 }
@@ -283,19 +283,19 @@ main {
   width: 100%;
 }
 
-.cart-total {
+.carrito-total {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   width: 100%;
 }
 
-.cart-total p {
+.carrito-total p {
   color: white;
   font-weight: 700;
 }
 
-.cart-total span {
+.carrito-total span {
   color: white;
   font-weight: 400;
   font-size: 18px;
@@ -303,18 +303,18 @@ main {
 /* SOY RODRI DEL PASADO MARCANDO EL OPEN-CART */
 
 /*Toggle del carro*/
-.open-cart {
+.abrir-cart {
   transform: translate(0%);
   transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
 }
 
-.empty-msg {
+.mensaje-vacio {
   color: white;
   font-size: 14px;
 }
 
-.btn-buy,
-.btn-delete {
+.boton-comprar,
+.boton-borrar {
   cursor: pointer;
   padding: 10px 35px;
   color: white;
@@ -323,49 +323,40 @@ main {
   transition: 0.3s all ease-out;
 }
 
-.btn-buy {
+.boton-comprar {
   background: #090909;
 }
 
-.btn-buy,
-.btn-delete {
+.boton-comprar,
+.boton-borrar {
   width: 100%;
 }
 
-.btn-buy,
-.btn-delete {
+.boton-comprar,
+.boton-borrar {
   border: 2px solid rgb(69, 72, 69);
   background-color: transparent;
 }
-.btn-buy:hover,
-.btn-delete:hover {
+.boton-comprar:hover,
+.boton-borrar:hover {
   background: rgb(69, 72, 69);
   transition: 0.3s all ease-in;
 }
 
-.btn-load {
-  background: none;
-  border: 1px solid blue;
-  padding: 10px 35px;
-  color: var(--bg-white);
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.disabled {
+.desactivar {
   background-color: rgb(13, 13, 13);
   color: white;
   cursor: not-allowed;
   border: none;
 }
-.disabled:hover {
+.desactivar:hover {
   background-color: rgb(13, 13, 13);
   color: white;
   cursor: not-allowed;
   border: none;
 }
 
-.add-modal {
+.añadir-modal {
   padding: 15px 0px;
   display: flex;
   align-items: center;
@@ -379,7 +370,7 @@ main {
   transform: translateY(200%);
 }
 
-.active-modal {
+.activo-modal {
   transform: translateY(0);
   transition: all 1s ease-in;
 }
@@ -403,11 +394,11 @@ main {
 
 /* OPEN-MENU */
 
-.show-overlay {
+.mostrar-overlay {
   display: block;
 }
 
-.hidden {
+.oculto {
   display: none;
 }
 
@@ -587,7 +578,7 @@ main {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='24' viewBox='0 0 88 24'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='autumn' fill='%23171718' fill-opacity='0.21'%3E%3Cpath d='M10 0l30 15 2 1V2.18A10 10 0 0 0 41.76 0H39.7a8 8 0 0 1 .3 2.18v10.58L14.47 0H10zm31.76 24a10 10 0 0 0-5.29-6.76L4 1 2 0v13.82a10 10 0 0 0 5.53 8.94L10 24h4.47l-6.05-3.02A8 8 0 0 1 4 13.82V3.24l31.58 15.78A8 8 0 0 1 39.7 24h2.06zM78 24l2.47-1.24A10 10 0 0 0 86 13.82V0l-2 1-32.47 16.24A10 10 0 0 0 46.24 24h2.06a8 8 0 0 1 4.12-4.98L84 3.24v10.58a8 8 0 0 1-4.42 7.16L73.53 24H78zm0-24L48 15l-2 1V2.18A10 10 0 0 1 46.24 0h2.06a8 8 0 0 0-.3 2.18v10.58L73.53 0H78z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-.active {
+.activo {
   background: rgb(69, 72, 69);
   border: 2px solid #0d0d0d;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='24' viewBox='0 0 88 24'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='autumn' fill='%23171718' fill-opacity='0.21'%3E%3Cpath d='M10 0l30 15 2 1V2.18A10 10 0 0 0 41.76 0H39.7a8 8 0 0 1 .3 2.18v10.58L14.47 0H10zm31.76 24a10 10 0 0 0-5.29-6.76L4 1 2 0v13.82a10 10 0 0 0 5.53 8.94L10 24h4.47l-6.05-3.02A8 8 0 0 1 4 13.82V3.24l31.58 15.78A8 8 0 0 1 39.7 24h2.06zM78 24l2.47-1.24A10 10 0 0 0 86 13.82V0l-2 1-32.47 16.24A10 10 0 0 0 46.24 24h2.06a8 8 0 0 1 4.12-4.98L84 3.24v10.58a8 8 0 0 1-4.42 7.16L73.53 24H78zm0-24L48 15l-2 1V2.18A10 10 0 0 1 46.24 0h2.06a8 8 0 0 0-.3 2.18v10.58L73.53 0H78z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");

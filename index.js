@@ -1,30 +1,30 @@
-const productsContainer = document.querySelector(".productos-contenedor");
-const showMoreBtn = document.querySelector(".boton-mas");
-const categoriesContainer = document.querySelector(".categorias");
-const categoriesList = document.querySelectorAll(".categoria");
-const cartBtn = document.querySelector(".cart-label");
-const cartMenu = document.querySelector(".cart");
-const menuBtn = document.querySelector(".menu-label");
-const barsMenu = document.querySelector(".navbar-lista");
+const productosContenedor = document.querySelector(".productos-contenedor");
+const MasBoton = document.querySelector(".boton-mas");
+const categoriasContenedor = document.querySelector(".categorias");
+const categoriaLista = document.querySelectorAll(".categoria");
+const carritotBoton = document.querySelector(".carrito-label");
+const carritoMenu = document.querySelector(".carrito");
+const menuBoton = document.querySelector(".menu-label");
+const barraMenu = document.querySelector(".navbar-list-link");
 const overlay = document.querySelector(".overlay");
-const productsCart = document.querySelector(".cart-container");
+const productosCarrito = document.querySelector(".carrito-contenedor");
 const total = document.querySelector(".total");
-const successModal = document.querySelector(".add-modal");
-const buyBtn = document.querySelector(".btn-buy");
-const deleteBtn = document.querySelector(".btn-delete");
-const cartBubble = document.querySelector(".cart-bubble");
+const exitoModal = document.querySelector(".añadir-modal");
+const comprarBoton = document.querySelector(".boton-comprar");
+const borrarBoton = document.querySelector(".boton-borrar");
+const carritoBurbuja = document.querySelector(".carrito-burbuja");
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-const saveCart = () => {
-  localStorage.setItem("cart", JSON.stringify(cart));
+const guardarCarrito = () => {
+  localStorage.setItem("carrito", JSON.stringify(carrito));
 };
 
-const createProductTemplate = (product) => {
-  const { id, nombre, precio, tallas, tarjetaImg } = product;
+const crearPlantillaProductos = (producto) => {
+  const { id, nombre, precio, tallas, tarjetaImg } = producto;
 
   return `
-     <div class="productos-contenedor-tarjeta product">
+     <div class="productos-contenedor-tarjeta">
      <img class="tarjeta-img" src=${tarjetaImg} alt="" />
      <div class="tarjeta-info">
          <h3 class="tarjeta-info-titulos">${nombre}</h3>
@@ -40,7 +40,7 @@ const createProductTemplate = (product) => {
          </div>
          
          <button
-									class="btn-add tarjeta-info-comprar"
+									class="tarjeta-info-comprar"
 									data-id="${id}"
 									data-nombre="${nombre}"
 									data-precio="${precio}"
@@ -55,349 +55,351 @@ const createProductTemplate = (product) => {
    `;
 };
 
-const renderProducts = (productsList) => {
-  productsContainer.innerHTML += productsList
-    .map(createProductTemplate)
+const renderizarProductos = (productosLista) => {
+  productosContenedor.innerHTML += productosLista
+    .map(crearPlantillaProductos)
     .join("");
 };
 
-const isLastIndexOf = () => {
-  return appState.currentProductsIndex === appState.productsLimit - 1;
+const ultimoIndice = () => {
+  return appEstado.indiceProductosActuales === appEstado.productosLimite - 1;
 };
 
-const showMoreProducts = () => {
-  appState.currentProductsIndex += 1;
-  let { products, currentProductsIndex } = appState;
-  renderProducts(products[currentProductsIndex]);
-  if (isLastIndexOf()) {
-    showMoreBtn.classList.add("hidden");
+const mostrarMasProductos = () => {
+  appEstado.indiceProductosActuales += 1;
+  let { productos, indiceProductosActuales } = appEstado;
+  renderizarProductos(productos[indiceProductosActuales]);
+  if (ultimoIndice()) {
+    MasBoton.classList.add("oculto");
   }
 };
 
-const isInactiveFilterBtn = (element) => {
+const inactivoFiltroBoton = (element) => {
   return (
     element.classList.contains("categoria") &&
-    !element.classList.contains("active")
+    !element.classList.contains("activo")
   );
 };
 
-const changeBtnActiveState = (selectedCategory) => {
-  const categories = [...categoriesList];
-  categories.forEach((categoryBtn) => {
-    if (categoryBtn.dataset.category !== selectedCategory) {
-      categoryBtn.classList.remove("active");
+const cambiarEstadoActivoDelBoton = (seleccionarCategoria) => {
+  const categorias = [...categoriaLista];
+  categorias.forEach((categoriaBoton) => {
+    if (categoriaBoton.dataset.category !== seleccionarCategoria) {
+      categoriaBoton.classList.remove("activo");
       return;
     }
-    categoryBtn.classList.add("active");
+    categoriaBoton.classList.add("activo");
   });
 };
 
-const setShowMoreVisibility = () => {
-  if (!appState.activeFilter) {
-    showMoreBtn.classList.remove("hidden");
+const establecerMostrarVisibilidad = () => {
+  if (!appEstado.activoFiltro) {
+    MasBoton.classList.remove("oculto");
     return;
   }
-  showMoreBtn.classList.add("hidden");
+  MasBoton.classList.add("oculto");
 };
 
-const changeFilterState = (btn) => {
-  appState.activeFilter = btn.dataset.category;
-  changeBtnActiveState(appState.activeFilter);
-  setShowMoreVisibility();
+const cambiarEstadoFiltro = (boton) => {
+  appEstado.activoFiltro = boton.dataset.category;
+  cambiarEstadoActivoDelBoton(appEstado.activoFiltro);
+  establecerMostrarVisibilidad();
 };
 
-const renderFilteredProducts = () => {
-  const filteredProducts = productsData.filter((product) => {
-    return product.categoria === appState.activeFilter;
+const renderizarProductosFiltrados = () => {
+  const filtradosProductos = productosData.filter((producto) => {
+    return producto.categoria === appEstado.activoFiltro;
   });
-  renderProducts(filteredProducts);
+  renderizarProductos(filtradosProductos);
 };
 
-const applyFilter = ({ target }) => {
+const aplicarFiltro = ({ target }) => {
   //Chequear que sea boton y no este activo
-  if (!isInactiveFilterBtn(target)) {
+  if (!inactivoFiltroBoton(target)) {
     return;
   }
   //cambiar el estado del filtro
-  changeFilterState(target);
+  cambiarEstadoFiltro(target);
 
   //si hay filtro activo, renderizo prod filtrados
-  productsContainer.innerHTML = "";
-  if (appState.activeFilter) {
-    renderFilteredProducts();
-    appState.currentProductsIndex = 0;
+  productosContenedor.innerHTML = "";
+  if (appEstado.activoFiltro) {
+    renderizarProductosFiltrados();
+    appEstado.indiceProductosActuales = 0;
     return;
   }
   //Si no hay filtro activo, renderizo 1er array
-  renderProducts(appState.products[0]);
+  renderizarProductos(appEstado.productos[0]);
 };
 
-const toggleCart = () => {
-  cartMenu.classList.toggle("open-cart");
-  if (barsMenu.classList.contains("open-menu")) {
-    barsMenu.classList.remove("open-menu");
+const toggleCarrito = () => {
+  carritoMenu.classList.toggle("abrir-cart");
+  if (barraMenu.classList.contains("abrir-menu")) {
+    barraMenu.classList.remove("abrir-menu");
     return;
   }
-  overlay.classList.toggle("show-overlay");
+  overlay.classList.toggle("mostrar-overlay");
 };
 
 const toggleMenu = () => {
-  barsMenu.classList.toggle("open-menu");
-  if (cartMenu.classList.contains("open-cart")) {
-    cartMenu.classList.remove("open-cart");
+  barraMenu.classList.toggle("abrir-menu");
+  if (carritoMenu.classList.contains("abrir-cart")) {
+    carritoMenu.classList.remove("abrir-cart");
     return;
   }
-  overlay.classList.toggle("show-overlay");
+  overlay.classList.toggle("mostrar-overlay");
 };
 
-const closeOnScroll = () => {
+const cerrarScrollAlDesplazar = () => {
   if (
-    !barsMenu.classList.contains("open-menu") &&
-    !cartMenu.classList.contains("open-cart")
+    !barraMenu.classList.contains("abrir-menu") &&
+    !carritoMenu.classList.contains("abrir-cart")
   ) {
     return;
   }
-  barsMenu.classList.remove("open-menu");
-  cartMenu.classList.remove("open-cart");
-  overlay.classList.remove("show-overlay");
+  barraMenu.classList.remove("abrir-menu");
+  carritoMenu.classList.remove("abrir-cart");
+  overlay.classList.remove("mostrar-overlay");
 };
 
-const closeOnClick = (e) => {
+const cerrarAlHacerClick = (e) => {
   if (!e.target.classList.contains("lista-link")) {
     return;
   }
-  barsMenu.classList.remove("open-menu");
-  overlay.classList.remove("show-overlay");
+  barraMenu.classList.remove("abrir-menu");
+  overlay.classList.remove("mostrar-overlay");
 };
 
-const closeOnOverlayClick = () => {
-  barsMenu.classList.remove("open-menu");
-  cartMenu.classList.remove("open-cart");
-  overlay.classList.remove("show-overlay");
+const cerrarAlOverlayClick = () => {
+  barraMenu.classList.remove("abrir-menu");
+  carritoMenu.classList.remove("abrir-cart");
+  overlay.classList.remove("mostrar-overlay");
 };
 
 //LOGICA DEL CARRITO
 
-const createCartProductTemplate = (cartProduct) => {
-  const { id, nombre, precio, img, quantity } = cartProduct;
+const crearPlanillaDeTarjetaCarrito = (carritoProducto) => {
+  const { id, nombre, precio, img, cantidad } = carritoProducto;
   return `
-	<div class="cart-item">
+	<div class="carrito-item">
 		<img
 			src=${img}
 			alt="img"
 		/>
 		<div class="item-info">
-			<h3 class="item-title">${nombre}</h3>
+			<h3 class="item-titulo">${nombre}</h3>
 			<p class="item-bid">Precio</p>
-			<span class="item-price">${precio} $</span>
+			<span class="item-precio">${precio} $</span>
 		</div>
-		<div class="item-handler">
-			<span class="quantity-handler down" data-id=${id}>-</span>
-			<span class="item-quantity">${quantity}</span>
-			<span class="quantity-handler up" data-id=${id}>+</span>
+		<div class="item-manipulador">
+			<span class="cantidad-manipulador menos" data-id=${id}>-</span>
+			<span class="item-cantidad">${cantidad}</span>
+			<span class="cantidad-manipulador mas" data-id=${id}>+</span>
 		</div>
 	</div>
 	`;
 };
 
-const renderCart = () => {
-  if (!cart.length) {
-    productsCart.innerHTML = `<p class="empty-msg">Tu carrito está vacío...</p>`;
+const renderizarCarrito = () => {
+  if (!carrito.length) {
+    productosCarrito.innerHTML = `<p class="mensaje-vacio">Tu carrito está vacío...</p>`;
     return;
   }
-  productsCart.innerHTML = cart.map(createCartProductTemplate).join("");
+  productosCarrito.innerHTML = carrito
+    .map(crearPlanillaDeTarjetaCarrito)
+    .join("");
 };
 
-const getCartTotal = () => {
-  return cart.reduce((acc, val) => {
-    return acc + Number(val.precio) * Number(val.quantity);
+const obtenerCarritoTotal = () => {
+  return carrito.reduce((acc, val) => {
+    return acc + Number(val.precio) * Number(val.cantidad);
   }, 0);
 };
 
-const showCartTotal = () => {
-  total.innerHTML = `${getCartTotal().toFixed(2)} $`;
+const mostrarCarritoTotal = () => {
+  total.innerHTML = `${obtenerCarritoTotal().toFixed(2)} $`;
 };
 
-const createProductData = (product) => {
-  const { id, nombre, precio, img } = product;
+const crearDatosProductos = (producto) => {
+  const { id, nombre, precio, img } = producto;
   return { id, nombre, precio, img };
 };
 
-const isExistingCartProduct = (productId) => {
-  return cart.find((item) => {
-    return item.id === productId;
+const esUnProductoExistenteEnCarrito = (productoId) => {
+  return carrito.find((item) => {
+    return item.id === productoId;
   });
 };
 
-const addUnitToProduct = (product) => {
-  cart = cart.map((cartProduct) => {
-    return cartProduct.id === product.id
-      ? { ...cartProduct, quantity: cartProduct.quantity + 1 }
-      : cartProduct;
+const agregarUnidadProducto = (producto) => {
+  carrito = carrito.map((carritoProducto) => {
+    return carritoProducto.id === producto.id
+      ? { ...carritoProducto, cantidad: carritoProducto.cantidad + 1 }
+      : carritoProducto;
   });
 };
 
-const showSuccessModal = (msg) => {
-  successModal.classList.add("active-modal");
-  successModal.textContent = msg;
+const mostrarModalExitoso = (mensaje) => {
+  exitoModal.classList.add("activo-modal");
+  exitoModal.textContent = mensaje;
   setTimeout(() => {
-    successModal.classList.remove("active-modal");
+    exitoModal.classList.remove("activo-modal");
   }, 1500);
 };
 
-const createCartProduct = (product) => {
-  cart = [
-    ...cart,
+const crearTarjetaProductos = (producto) => {
+  carrito = [
+    ...carrito,
     {
-      ...product,
-      quantity: 1,
+      ...producto,
+      cantidad: 1,
     },
   ];
 };
 
-const disableBtn = (btn) => {
-  if (!cart.length) {
-    btn.classList.add("disabled");
+const desactivarBoton = (boton) => {
+  if (!carrito.length) {
+    boton.classList.add("desactivar");
   } else {
-    btn.classList.remove("disabled");
+    boton.classList.remove("desactivar");
   }
 };
 
-const renderCartBubble = () => {
-  cartBubble.textContent = cart.reduce((acc, val) => {
-    return acc + val.quantity;
+const renderizarCarritoBurbuja = () => {
+  carritoBurbuja.textContent = carrito.reduce((acc, val) => {
+    return acc + val.cantidad;
   }, 0);
 };
 
-const updateCartState = () => {
+const actualizarCarritoEstado = () => {
   //Guardar carrito en LC
-  saveCart();
+  guardarCarrito();
   //Renderizar Carrito
-  renderCart();
+  renderizarCarrito();
   //Mostrar el total del carrito
-  showCartTotal();
+  mostrarCarritoTotal();
   //Chequear disable de botones
-  disableBtn(buyBtn);
-  disableBtn(deleteBtn);
+  desactivarBoton(comprarBoton);
+  desactivarBoton(borrarBoton);
   //Render burbuja del cart
-  renderCartBubble();
+  renderizarCarritoBurbuja();
 };
 
-const addProduct = (e) => {
-  if (!e.target.classList.contains("btn-add")) {
+const agregarProducto = (e) => {
+  if (!e.target.classList.contains("tarjeta-info-comprar")) {
     return;
   }
-  const product = createProductData(e.target.dataset);
+  const producto = crearDatosProductos(e.target.dataset);
   //si el producto ya existe
-  if (isExistingCartProduct(product.id)) {
+  if (esUnProductoExistenteEnCarrito(producto.id)) {
     //agregamos unidad al producto
-    addUnitToProduct(product);
+    agregarUnidadProducto(producto);
     //damos feedback
-    showSuccessModal("Se agregó una unidad del producto al carrito");
+    mostrarModalExitoso("Se agregó una unidad del producto al carrito");
   } else {
     //Si el producto no existe
     //Creamos el nuevo producto en el array
-    createCartProduct(product);
+    crearTarjetaProductos(producto);
     //damos feedback
-    showSuccessModal("El producto se ha agregado al carrito");
+    mostrarModalExitoso("El producto se ha agregado al carrito");
   }
 
   //actualizamos data del carrito
-  updateCartState();
+  actualizarCarritoEstado();
 };
 
-const removeProductFromCart = (existingProduct) => {
-  cart = cart.filter((product) => {
-    return product.id !== existingProduct.id;
+const quitarProductoDelCarrito = (existeProducto) => {
+  carrito = carrito.filter((producto) => {
+    return producto.id !== existeProducto.id;
   });
-  updateCartState();
+  actualizarCarritoEstado();
 };
 
-const substractProductUnit = (existingProduct) => {
-  cart = cart.map((product) => {
-    return product.id === existingProduct.id
-      ? { ...product, quantity: Number(product.quantity) - 1 }
-      : product;
+const restarUnidadProducto = (existeProducto) => {
+  carrito = carrito.map((producto) => {
+    return producto.id === existeProducto.id
+      ? { ...producto, cantidad: Number(producto.cantidad) - 1 }
+      : producto;
   });
 };
 
-const handleMinusBtnEvent = (id) => {
-  const existingCartProduct = cart.find((item) => item.id === id);
+const eventoBotonMenos = (id) => {
+  const existeProductoCarrito = carrito.find((item) => item.id === id);
 
-  if (existingCartProduct.quantity === 1) {
+  if (existeProductoCarrito.cantidad === 1) {
     //Eliminar producto
     if (window.confirm("¿Desea eliminar el producto del carrito?")) {
-      removeProductFromCart(existingCartProduct);
+      quitarProductoDelCarrito(existeProductoCarrito);
     }
     return;
   }
   //Sacarle unidad al producto
-  substractProductUnit(existingCartProduct);
+  restarUnidadProducto(existeProductoCarrito);
 };
 
-const handlePlusBtnEvent = (id) => {
-  const existingCartProduct = cart.find((item) => item.id === id);
-  addUnitToProduct(existingCartProduct);
+const eventoBotonMas = (id) => {
+  const existeProductoCarrito = carrito.find((item) => item.id === id);
+  agregarUnidadProducto(existeProductoCarrito);
 };
 
-const handleQuantity = (e) => {
-  if (e.target.classList.contains("down")) {
+const manejarCantidad = (e) => {
+  if (e.target.classList.contains("menos")) {
     //Manejamos evento de boton -
-    handleMinusBtnEvent(e.target.dataset.id);
-  } else if (e.target.classList.contains("up")) {
+    eventoBotonMenos(e.target.dataset.id);
+  } else if (e.target.classList.contains("mas")) {
     //Manejamos evento de boton +
-    handlePlusBtnEvent(e.target.dataset.id);
+    eventoBotonMas(e.target.dataset.id);
   }
   //Actualizamos estado de carrito
-  updateCartState();
+  actualizarCarritoEstado();
 };
 
-const resetCartItem = () => {
-  cart = [];
-  updateCartState();
+const resetCarritotItem = () => {
+  carrito = [];
+  actualizarCarritoEstado();
 };
 
-const completeCartAction = (confirmMsg, successMsg) => {
-  if (!cart.length) return;
+const completarCarritoAccion = (confirmarMensaje, exitoMensaje) => {
+  if (!carrito.length) return;
 
-  if (window.confirm(confirmMsg)) {
-    resetCartItem();
-    alert(successMsg);
+  if (window.confirm(confirmarMensaje)) {
+    resetCarritotItem();
+    alert(exitoMensaje);
   }
 };
 
-const completeBuy = () => {
-  completeCartAction(
+const completarCompra = () => {
+  completarCarritoAccion(
     "¿Desea completar su compra?",
     `Muchas gracias por su compra, con un total de ${total.innerHTML}.`
   );
 };
 
-const deleteCart = () => {
-  completeCartAction(
+const borrarCarrito = () => {
+  completarCarritoAccion(
     "¿Desea vaciar el carrito?",
     "No hay productos en el carrito"
   );
 };
 
 const init = () => {
-  renderProducts(appState.products[appState.currentProductsIndex]);
-  showMoreBtn.addEventListener("click", showMoreProducts);
-  categoriesContainer.addEventListener("click", applyFilter);
-  cartBtn.addEventListener("click", toggleCart);
-  menuBtn.addEventListener("click", toggleMenu);
-  window.addEventListener("scroll", closeOnScroll);
-  barsMenu.addEventListener("click", closeOnClick);
-  overlay.addEventListener("click", closeOnOverlayClick);
-  document.addEventListener("DOMContentLoaded", renderCart);
-  document.addEventListener("DOMContentLoaded", showCartTotal);
-  productsContainer.addEventListener("click", addProduct);
-  productsCart.addEventListener("click", handleQuantity);
-  buyBtn.addEventListener("click", completeBuy);
-  deleteBtn.addEventListener("click", deleteCart);
-  disableBtn(buyBtn);
-  disableBtn(deleteBtn);
-  renderCartBubble();
+  renderizarProductos(appEstado.productos[appEstado.indiceProductosActuales]);
+  MasBoton.addEventListener("click", mostrarMasProductos);
+  categoriasContenedor.addEventListener("click", aplicarFiltro);
+  carritotBoton.addEventListener("click", toggleCarrito);
+  menuBoton.addEventListener("click", toggleMenu);
+  window.addEventListener("scroll", cerrarScrollAlDesplazar);
+  barraMenu.addEventListener("click", cerrarAlHacerClick);
+  overlay.addEventListener("click", cerrarAlOverlayClick);
+  document.addEventListener("DOMContentLoaded", renderizarCarrito);
+  document.addEventListener("DOMContentLoaded", mostrarCarritoTotal);
+  productosContenedor.addEventListener("click", agregarProducto);
+  productosCarrito.addEventListener("click", manejarCantidad);
+  comprarBoton.addEventListener("click", completarCompra);
+  borrarBoton.addEventListener("click", borrarCarrito);
+  desactivarBoton(comprarBoton);
+  desactivarBoton(borrarBoton);
+  renderizarCarritoBurbuja();
 };
 
 init();

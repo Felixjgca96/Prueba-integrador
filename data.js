@@ -1,4 +1,4 @@
-const productsData = [
+const productosData = [
   {
     id: 1,
     nombre: "Franela 100% Algodon",
@@ -121,17 +121,17 @@ const productsData = [
   },
 ];
 
-const divideProductsInParts = (size) => {
-  let productsList = [];
-  for (let i = 0; i < productsData.length; i += size) {
-    productsList.push(productsData.slice(i, i + size));
+const dividirProductosEnPartes = (size) => {
+  let productosLista = [];
+  for (let i = 0; i < productosData.length; i += size) {
+    productosLista.push(productosData.slice(i, i + size));
   }
-  return productsList;
+  return productosLista;
 };
 
-const appState = {
-  products: divideProductsInParts(4),
-  currentProductsIndex: 0,
-  productsLimit: divideProductsInParts(4).length,
-  activeFilter: null,
+const appEstado = {
+  productos: dividirProductosEnPartes(4),
+  indiceProductosActuales: 0,
+  productosLimite: dividirProductosEnPartes(4).length,
+  activoFiltro: null,
 };

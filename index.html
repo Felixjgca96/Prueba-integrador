@@ -16,15 +16,11 @@
         /></a>
 
         <div class="navbar-list">
-          <div class="menu-label menu-icon">
-            <img
-              src="./img/menu.png"
-              alt=""
-              class="menu-label menu-icon icono"
-            />
+          <div class="menu-label">
+            <img src="./img/menu.png" alt="" class="menu-label icono" />
           </div>
 
-          <ul class="navbar-list-link navbar-lista">
+          <ul class="navbar-list-link">
             <div class="lista">
               <li>
                 <a class="lista-link navbar-link" href="#hero">Inicio</a>
@@ -44,47 +40,47 @@
             </div>
           </ul>
         </div>
-        <div class="carrito-label carrito-icono cart-label">
+        <div class="carrito-label carrito-icono">
           <img
             src="./img/carrito-de-compras.png"
             alt=""
             class="carrito-icono"
           />
-          <div class="carrito-burbuja cart-bubble">0</div>
+          <div class="carrito-burbuja">0</div>
         </div>
 
-        <div class="cart">
+        <div class="carrito">
           <h2>Mi carrito</h2>
 
-          <div class="cart-container">
+          <div class="carrito-contenedor">
             <!-- HOLA! SOY RODRI DEL PASADO CON UN EJEMPLO DE PRODUCTO EN EL CART -->
 
-            <!-- <div class="cart-item">
+            <!-- <div class="carrito-item">
               <img
                 src="./assets/img/products/bunny.png"
                 alt="Nft del carrito"
               />
               <div class="item-info">
-                <h3 class="item-title">NOMBRE</h3>
+                <h3 class="item-titulo">NOMBRE</h3>
                 <p class="item-bid">Current bid</p>
-                <span class="item-price">$BID ETH</span>
+                <span class="item-precio">$BID ETH</span>
               </div>
-              <div class="item-handler">
-                <span class="quantity-handler down" data-id="ID">-</span>
-                <span class="item-quantity">CANTIDAD</span>
-                <span class="quantity-handler up" data-id="ID">+</span>
+              <div class="item-manipulador">
+                <span class="cantidad-manipulador menos" data-id="ID">-</span>
+                <span class="item-cantidad">CANTIDAD</span>
+                <span class="cantidad-manipulador mas" data-id="ID">+</span>
               </div>
             </div> -->
           </div>
 
           <span class="divider"></span>
 
-          <div class="cart-total">
+          <div class="carrito-total">
             <p>Total:</p>
             <span class="total"></span>
           </div>
-          <button class="btn-buy">Comprar</button>
-          <button class="btn-delete">Vaciar carrito</button>
+          <button class="boton-comprar">Comprar</button>
+          <button class="boton-borrar">Vaciar carrito</button>
         </div>
         <div class="overlay"></div>
       </nav>
@@ -143,14 +139,14 @@
       <section class="productos" id="productos">
         <h2 class="productos-titulos">Productos</h2>
         <div class="categorias">
-          <button class="categoria active">Todos</button>
+          <button class="categoria activo">Todos</button>
           <div class="categorias-divisor">
             <button class="categoria" data-category="hombre">Hombre</button>
             <button class="categoria" data-category="dama">Dama</button>
             <button class="categoria" data-category="niño">Niño-Niña</button>
           </div>
         </div>
-        <div class="productos-contenedor product">
+        <div class="productos-contenedor">
           <!-- <div class="productos-contenedor-tarjeta">
             <img class="tarjeta-img" src="./img/franela100.png" alt="" />
             <div class="tarjeta-info">
@@ -290,7 +286,7 @@
         </ul>
       </div>
     </footer>
-    <div class="add-modal"></div>
+    <div class="añadir-modal"></div>
     <script src="./data.js"></script>
     <script src="./index.js"></script>
   </body>

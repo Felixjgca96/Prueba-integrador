@@ -105,7 +105,7 @@
 
   /* SOY RODRI DEL PASADO MARCANDO EL OPEN-MENU */
 
-  .open-menu {
+  .abrir-menu {
     display: flex;
   }
 }
@@ -131,13 +131,6 @@
     padding: 10px 30px;
   }
   /* MODIFICACION DE PAGINA CAR  */
-  .carrito {
-    width: 400px;
-  }
-
-  .carrito-contenedor {
-    justify-content: center;
-  }
 }
 
 @media (max-width: 675px) {
@@ -350,43 +343,36 @@
 
   /* CARRITO */
 
-  .cart {
+  .carrito {
     top: 80px;
-    min-width: 300px;
   }
   .overlay {
     top: 80px;
   }
 
-  /*OCULTAR BARRA DE SCROLL DEL CARRITO*/
-
-  .cart::-webkit-scrollbar {
-    display: none;
-  }
-
-  .cart h2 {
+  .carrito h2 {
     font-size: 15px;
   }
 
-  .cart-item {
+  .carrito-item {
     flex-direction: column;
     gap: 10px;
     text-align: center;
   }
 
-  .cart-item img {
+  .carrito-item img {
     border-radius: 10px;
   }
 
-  .item-title {
+  .item-titulo {
     font-size: 14px;
   }
 
-  .item-price {
+  .item-precio {
     font-size: 14px;
   }
 
-  .cart-total span {
+  .carrito-total span {
     font-size: 15px;
   }
 }
@@ -411,39 +397,6 @@
   .info-datos {
     flex-direction: column;
     width: 250px;
-  }
-
-  /* MODIFICACION PAGINA CARRITO  */
-  .carrito {
-    width: 250px;
-  }
-  .carrito-contenedor {
-    gap: 5px;
-    flex-direction: column;
-    width: 100%;
-  }
-  .carrito-contenedor-superior {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .superior-img {
-    height: 60px;
-    width: 60px;
-  }
-
-  .carrito-total-titulo,
-  .carrito-total-monto {
-    font-weight: 600;
-    font-size: 18px;
-  }
-
-  .carrito-total-productos {
-    display: none;
-  }
-  .carrito-boton {
-    padding: 2px;
-    font-size: 20px;
   }
 
   /* SECCION PRODUCTOS  (CARTAS)*/
@@ -511,5 +464,10 @@
 @media (max-width: 410px) {
   .lista2 {
     flex-direction: column;
+  }
+
+  .carrito {
+    width: 290px;
+    min-width: 250px;
   }
 }
