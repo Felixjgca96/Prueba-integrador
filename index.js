@@ -202,7 +202,11 @@ const crearPlanillaDeTarjetaCarrito = (carritoProducto) => {
 
 const renderizarCarrito = () => {
   if (!carrito.length) {
-    productosCarrito.innerHTML = `<p class="mensaje-vacio">Tu carrito está vacío...</p>`;
+    productosCarrito.innerHTML = `<div class="contenedor-vacio">
+    <p class="mensaje-vacio">Tu carrito está vacío...</p>
+    <img class="logo-carrito-vacio" src="./img/triste.png" alt="logo">
+  </div>
+    `;
     return;
   }
   productosCarrito.innerHTML = carrito
@@ -328,7 +332,7 @@ const eventoBotonMenos = (id) => {
 
   if (existeProductoCarrito.cantidad === 1) {
     //Eliminar producto
-    if (window.confirm("¿Desea eliminar el producto del carrito?")) {
+    if (window.confirm("¿Deseas eliminar el productos de tu carrito?")) {
       quitarProductoDelCarrito(existeProductoCarrito);
     }
     return;
@@ -370,15 +374,15 @@ const completarCarritoAccion = (confirmarMensaje, exitoMensaje) => {
 
 const completarCompra = () => {
   completarCarritoAccion(
-    "¿Desea completar su compra?",
+    "¿Deseas completar tu compra?",
     `Muchas gracias por su compra, con un total de ${total.innerHTML}.`
   );
 };
 
 const borrarCarrito = () => {
   completarCarritoAccion(
-    "¿Desea vaciar el carrito?",
-    "No hay productos en el carrito"
+    "¿Deseas vaciar tu carrito?",
+    "Tu carrito está vacío..."
   );
 };
 

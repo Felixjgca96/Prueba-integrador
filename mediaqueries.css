@@ -87,6 +87,7 @@
     text-align: center;
     justify-content: center;
   }
+
   .separador {
     display: none;
   }
@@ -97,7 +98,7 @@
   }
 
   /* Mostramos el icono del menu */
-  .menu-label {
+  .usuario-label {
     display: flex;
     order: 2;
     cursor: pointer;
@@ -434,6 +435,14 @@
 
   .tarjeta-info {
     width: 230px;
+  }
+  .botones {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .boton-comprar,
+  .boton-borrar {
+    width: 100%;
   }
 }
 @media (max-width: 440px) {

@@ -16,8 +16,8 @@
         /></a>
 
         <div class="navbar-list">
-          <div class="menu-label">
-            <img src="./img/menu.png" alt="" class="menu-label icono" />
+          <div class="menu-label oro">
+            <img src="./img/menu.png" alt="" class="menu-label plata icono" />
           </div>
 
           <ul class="navbar-list-link">
@@ -79,8 +79,10 @@
             <p>Total:</p>
             <span class="total"></span>
           </div>
-          <button class="boton-comprar">Comprar</button>
-          <button class="boton-borrar">Vaciar carrito</button>
+          <div class="botones">
+            <button class="boton-comprar">Comprar</button>
+            <button class="boton-borrar">Vaciar carrito</button>
+          </div>
         </div>
         <div class="overlay"></div>
       </nav>
@@ -182,6 +184,7 @@
                 id="nombre"
                 type="text"
                 placeholder="Ingrese nombre y apellido"
+                required
               />
               <label class="formulario-info-titulos" for="correo">Email:</label>
               <input
@@ -189,6 +192,7 @@
                 type="email"
                 id="correo"
                 placeholder="Ingrese mail"
+                required
               />
               <label class="formulario-info-titulos" for="telefono"
                 >Numero de contacto:</label
@@ -198,6 +202,7 @@
                 type="number"
                 id="telefono"
                 placeholder="Ingrese telefono"
+                required
               />
               <input
                 class="formulario-info-boton"
