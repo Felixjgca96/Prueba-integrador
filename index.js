@@ -2,10 +2,14 @@ const productosContenedor = document.querySelector(".productos-contenedor");
 const MasBoton = document.querySelector(".boton-mas");
 const categoriasContenedor = document.querySelector(".categorias");
 const categoriaLista = document.querySelectorAll(".categoria");
-const carritotBoton = document.querySelector(".carrito-label");
+const carritoBoton = document.querySelector(".carrito-label");
 const carritoMenu = document.querySelector(".carrito");
 const menuBoton = document.querySelector(".menu-label");
 const barraMenu = document.querySelector(".navbar-list-link");
+// nuevo
+const userBoton = document.querySelector(".user-label");
+const usuarioMenu = document.querySelector(".usuario");
+// nuevo
 const overlay = document.querySelector(".overlay");
 const productosCarrito = document.querySelector(".carrito-contenedor");
 const total = document.querySelector(".total");
@@ -138,6 +142,10 @@ const toggleCarrito = () => {
     barraMenu.classList.remove("abrir-menu");
     return;
   }
+  if (usuarioMenu.classList.contains("abrir-usuario")) {
+    usuarioMenu.classList.remove("abrir-usuario");
+    return;
+  }
   overlay.classList.toggle("mostrar-overlay");
 };
 
@@ -147,18 +155,40 @@ const toggleMenu = () => {
     carritoMenu.classList.remove("abrir-cart");
     return;
   }
+  if (usuarioMenu.classList.contains("abrir-usuario")) {
+    usuarioMenu.classList.remove("abrir-usuario");
+    return;
+  }
   overlay.classList.toggle("mostrar-overlay");
 };
 
+// nuevo
+const toggleUser = () => {
+  usuarioMenu.classList.toggle("abrir-usuario");
+  if (carritoMenu.classList.contains("abrir-cart")) {
+    carritoMenu.classList.remove("abrir-cart");
+    return;
+  }
+  if (barraMenu.classList.contains("abrir-menu")) {
+    barraMenu.classList.remove("abrir-menu");
+    return;
+  }
+  barraMenu.classList.remove("abrir-menu");
+  overlay.classList.toggle("mostrar-overlay");
+};
+
+// nuevo
 const cerrarScrollAlDesplazar = () => {
   if (
     !barraMenu.classList.contains("abrir-menu") &&
-    !carritoMenu.classList.contains("abrir-cart")
+    !carritoMenu.classList.contains("abrir-cart") &&
+    !usuarioMenu.classList.contains("abrir-usuario")
   ) {
     return;
   }
   barraMenu.classList.remove("abrir-menu");
   carritoMenu.classList.remove("abrir-cart");
+  usuarioMenu.classList.remove("abrir-usuario");
   overlay.classList.remove("mostrar-overlay");
 };
 
@@ -171,6 +201,7 @@ const cerrarAlHacerClick = (e) => {
 };
 
 const cerrarAlOverlayClick = () => {
+  usuarioMenu.classList.remove("abrir-usuario");
   barraMenu.classList.remove("abrir-menu");
   carritoMenu.classList.remove("abrir-cart");
   overlay.classList.remove("mostrar-overlay");
@@ -390,10 +421,21 @@ const init = () => {
   renderizarProductos(appEstado.productos[appEstado.indiceProductosActuales]);
   MasBoton.addEventListener("click", mostrarMasProductos);
   categoriasContenedor.addEventListener("click", aplicarFiltro);
-  carritotBoton.addEventListener("click", toggleCarrito);
+  carritoBoton.addEventListener("click", toggleCarrito);
   menuBoton.addEventListener("click", toggleMenu);
+  // nuevo
+  userBoton.addEventListener("click", toggleUser);
+
+  // nuevo
+
   window.addEventListener("scroll", cerrarScrollAlDesplazar);
+
   barraMenu.addEventListener("click", cerrarAlHacerClick);
+  // nuevo
+  usuarioMenu.addEventListener("click", cerrarAlHacerClick);
+
+  // nuevo
+
   overlay.addEventListener("click", cerrarAlOverlayClick);
   document.addEventListener("DOMContentLoaded", renderizarCarrito);
   document.addEventListener("DOMContentLoaded", mostrarCarritoTotal);
