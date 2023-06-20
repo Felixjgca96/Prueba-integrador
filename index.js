@@ -18,6 +18,12 @@ const comprarBoton = document.querySelector(".boton-comprar");
 const borrarBoton = document.querySelector(".boton-borrar");
 const carritoBurbuja = document.querySelector(".carrito-burbuja");
 
+const formulario = document.querySelector(".formulario-info");
+const nombreInput = document.getElementById("nombre");
+const correoInput = document.getElementById("correo");
+const tlfInput = document.getElementById("telefono");
+const errorMessage = document.getElementById("form__error");
+
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 const guardarCarrito = () => {
@@ -173,7 +179,6 @@ const toggleUser = () => {
     barraMenu.classList.remove("abrir-menu");
     return;
   }
-  barraMenu.classList.remove("abrir-menu");
   overlay.classList.toggle("mostrar-overlay");
 };
 
@@ -196,6 +201,7 @@ const cerrarAlHacerClick = (e) => {
   if (!e.target.classList.contains("lista-link")) {
     return;
   }
+  usuarioMenu.classList.remove("abrir-usuario");
   barraMenu.classList.remove("abrir-menu");
   overlay.classList.remove("mostrar-overlay");
 };
@@ -417,6 +423,46 @@ const borrarCarrito = () => {
   );
 };
 
+const saveToSessionStorage = (user) => {
+  sessionStorage.setItem("activeUser", JSON.stringify(user));
+};
+
+const isEmpty = (input) => {
+  return !input.value.trim().length;
+};
+
+const isValidAccount = () => {
+  let valid = false;
+
+  if (isEmpty(nombreInput)) {
+    alert("Por favor, complete los datos.");
+    return;
+  }
+  if (isEmpty(correoInput)) {
+    alert("Por favor, complete los datos.");
+    return;
+  }
+
+  if (isEmpty(tlfInput)) {
+    alert("Por favor, complete los datos.");
+    return;
+  }
+
+  valid = true;
+  return valid;
+};
+
+const formularioInformacion = (e) => {
+  e.preventDefault();
+
+  if (isValidAccount()) {
+    formulario.reset();
+    alert(
+      "En menos de 24 horas, nuestro equipo de trabajo se estara comunicando contigo. Agradecemos tu paciencia, muchas gracias."
+    );
+  }
+};
+
 const init = () => {
   renderizarProductos(appEstado.productos[appEstado.indiceProductosActuales]);
   MasBoton.addEventListener("click", mostrarMasProductos);
@@ -434,6 +480,9 @@ const init = () => {
   // nuevo
   usuarioMenu.addEventListener("click", cerrarAlHacerClick);
 
+  // nuevo
+
+  formulario.addEventListener("submit", formularioInformacion);
   // nuevo
 
   overlay.addEventListener("click", cerrarAlOverlayClick);

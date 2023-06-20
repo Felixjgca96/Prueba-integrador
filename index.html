@@ -178,7 +178,7 @@
         <div class="contacto-contenedor">
           <div class="contacto-contenedor-formulario">
             <h3 class="formulario-titulo">Formulario de Contacto</h3>
-            <form class="formulario-info">
+            <form class="formulario-info" novalidate>
               <label class="formulario-info-titulos" for="nombre"
                 >Nombre y apellido:</label
               >
@@ -207,6 +207,8 @@
                 placeholder="Ingrese telefono"
                 required
               />
+              <small id="form__error"></small>
+
               <input
                 class="formulario-info-boton"
                 type="submit"
